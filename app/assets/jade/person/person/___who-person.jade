@@ -1,0 +1,44 @@
+mixin who( whoAmount, who, whoENG, who2, whoENG2, who3, whoENG3 )
+   case (whoAmount)
+      when '1'
+         .info_person.base_panel_info( style='display: none' )
+            span.mr-02 Связязи:
+            case (whoENG)
+               when ''
+                  span #{who}
+               default
+                  a( href='./persons.html##{whoENG}' ) #{who}
+      when '2'
+         .info_person.base_panel_info( style='display: none' )
+            span Связязи:
+            case (whoENG)
+               when ''
+                  span #{who}
+               default
+                  a( href='./persons.html##{whoENG}' ) #{who}
+            | ,&nbsp;
+            case (whoENG2)
+               when ''
+                  span #{who2}
+               default
+                  a( href='./persons.html##{whoENG2}' ) #{who2}
+      when '3'
+         .info_person.base_panel_info( style='display: none' )
+            span Связязи:
+            case (whoENG)
+               when ''
+                  span #{who}
+               default
+                  a( href='./persons.html##{whoENG}' ) #{who}
+            | ,&nbsp;
+            case (whoENG2)
+               when ''
+                  span #{who2}
+               default
+                  a( href='./persons.html##{whoENG2}' ) #{who2}
+            | ,&nbsp;
+            case (whoENG3)
+               when ''
+                  span #{who3}
+               default
+                  a( href='./persons.html##{whoENG3}' ) #{who3}

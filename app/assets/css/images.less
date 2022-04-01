@@ -1,0 +1,26 @@
+.bg() {
+   background-image: url("../data/bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   
+   filter: grayscale(50%) brightness(50%);
+}
+
+.image( @name ) {
+   background-image: url("../data/@{name}.svg");
+};
+
+.sponsr-xx() {
+   background-image: url("../data/sponsr/sponsr-x.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+.sponsr() {
+   background-image: url("../data/sponsr/sponsr.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}

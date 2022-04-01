@@ -1,0 +1,41 @@
+mixin war( warAmount, war, warENG, war2, warENG2, war3, warENG3 )
+   case (warAmount)
+      when '1'
+         .info_war.base_panel_info( style='display: none' )
+            case (warENG)
+               when ''
+                  span #{war}
+               default
+                  a( href='./war.html##{warENG}' ) #{war}
+      when '2'
+         .info_war.base_panel_info( style='display: none' )
+            case (warENG)
+               when ''
+                  span #{war}
+               default
+                  a( href='./war.html##{warENG}' ) #{war}
+            | ,&nbsp;
+            case (warENG2)
+               when ''
+                  span #{war2}
+               default
+                  a( href='./war.html##{warENG2}' ) #{war2}
+      when '3'
+         .info_war.base_panel_info( style='display: none' )
+            case (warENG)
+               when ''
+                  span #{war}
+               default
+                  a( href='./war.html##{warENG}' ) #{war}
+            | ,&nbsp;
+            case (warENG2)
+               when ''
+                  span #{war2}
+               default
+                  a( href='./war.html##{warENG2}' ) #{war2}
+            | ,&nbsp;
+            case (warENG3)
+               when ''
+                  span #{war3}
+               default
+                  a( href='./war.html##{warENG3}' ) #{war3}

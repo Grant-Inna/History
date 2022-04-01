@@ -1,0 +1,20 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Войны и Сражения' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Войны и', 'Сражения')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/war/filters/filters-list
+               include ../assets/jade/war/wars-list
+
+   include ../assets/jade/static/footer
+

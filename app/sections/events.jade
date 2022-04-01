@@ -1,0 +1,25 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | События' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('События', '')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/events/filters/filters-list
+               +filter('')
+               include ../assets/jade/events/events-list
+
+
+
+
+
+   include ../assets/jade/static/footer
+

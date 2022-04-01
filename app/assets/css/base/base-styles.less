@@ -1,0 +1,157 @@
+.row {
+   .row-flex();
+}
+.col {
+   .col();
+}
+
+
+a {
+   display: block;
+   text-decoration: none;
+   cursor: pointer;
+   
+   color: @color-project-blue-dark;
+   .tr();
+}
+
+.h1, .h2, .h3, .h4, .h5 {
+
+}
+.h1 {
+   .bebas-regular-60();
+}
+.h2 { .montserrat-regular-20(); }
+.h3 { .montserrat-regular-18() }
+.h4 { .montserrat-light-18(); }
+.h5 {  }
+
+.text-white {
+   color: @color-project-white;
+}
+.text-black {
+   color: @color-project-black;
+}
+.text-blue {
+   color: @color-project-blue;;
+}
+.text-blue-dark {
+   color: @color-project-blue-dark;
+}
+.text-light {
+   font-weight: 300;
+}
+
+
+#base_holder {
+   margin-top: 2.3rem;
+}
+#base_content_holder {
+   padding-top: 2.3rem;
+   padding-bottom: 7rem;
+   background-color: @color-project-bg;
+
+   border-radius: 2px;
+   position: relative;
+   
+   min-height: 60vh;
+}
+.base_page_holder {
+   width: 100%;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+.base_one_element {
+   position: relative;
+   .flex();
+   margin-top: 2rem;
+   cursor: default;
+}
+.base_main_info {
+   min-width: 14rem;
+}
+.base_icons_holder {
+   .u-row-flex(.6rem);
+   width: 120px;
+   .flex();
+   .justify-end();
+   
+   > div {
+      .u-col(.4rem)
+   }
+}
+.base_icon {
+   width: 1.3rem;
+   height: 1.34rem;
+   font-size: 1.3rem;
+   .tr();
+}
+.base_icon-big {
+   width: 1.7rem;
+   height: 1.7rem;
+   font-size: 1.7rem;
+   .tr();
+}
+
+
+
+.bebas-regular-60() {
+   .bebas-regular();
+   font-size: 4rem;
+   line-height: 4.2rem;
+}
+.bebas-book-20() {
+   .bebas-book();
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+}
+
+
+.montserrat-medium-20() {
+   .montserrat-medium();
+   font-size: 1.4rem;
+   line-height: 1.4rem;
+}
+.montserrat-medium-15() {
+   .montserrat-medium();
+   font-size: 1rem;
+   line-height: 1.2rem;
+}
+.montserrat-regular-20() {
+   .montserrat-regular();
+   font-size: 1.4rem;
+   line-height: 1.4rem;
+}
+.montserrat-regular-18-up() {
+   .montserrat-regular();
+   font-size: 1.2rem;
+   line-height: 1.4rem;
+   text-transform: uppercase;
+}
+.montserrat-regular-18() {
+   .montserrat-regular();
+   font-size: 1.2rem;
+   line-height: 1.4rem;
+}
+.montserrat-regular-15() {
+   .montserrat-regular();
+   font-size: 1rem;
+   line-height: 1.2rem;
+}
+.montserrat-light-18() {
+   .montserrat-light();
+   font-size: 1.2rem;
+   line-height: 1.4rem;
+}
+.montserrat-light-15() {
+   .montserrat-light();
+   font-size: 1rem;
+   line-height: 1.25rem;
+}
+.montserrat-light-13-l() {
+   .montserrat-light();
+   font-size: 0.85rem;
+   line-height: 1.2rem;
+   text-transform: lowercase;
+}
+

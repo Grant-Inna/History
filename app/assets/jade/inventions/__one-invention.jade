@@ -1,0 +1,16 @@
+mixin invention( type, link, img, name, place, placeENG, mainAbout, moreAmount, text, text2, text3, text4, text5 )
+   .inventions__one_invention.element-item( id='#{link}', class='#{type}__type', data-trigger="#{link}-tooltip" )
+      .invention__image
+         img( src='../assets/img/inventions/#{img}' )
+      .invention__meta
+         .invention__name #{name}
+         .invention__icon( class='icon-#{type}' )
+      .invention__about
+         p.invention__about-main #{mainAbout}
+         .invention__more
+            .icon-more
+            .icon-cross.base_icon( style='display: none' )
+      include __place-invention
+      +place( place, placeENG )
+   include __text-invention
+   +text( moreAmount, text, text2, text3, text4, text5 )

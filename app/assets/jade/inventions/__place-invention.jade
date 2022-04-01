@@ -1,0 +1,17 @@
+mixin place( place, placeENG )
+   case (place)
+      when ''
+         .invention__place
+            .invention__icon.icon-map-marker-light
+      default
+         case (placeENG)
+            when ''
+               .invention__place
+                  .invention__icon.icon-map-marker
+                  .invention__place-panel.base_panel_info( style='display: none' )
+                     p #{place}
+            default
+               .invention__place
+                  .concept__icon.icon-map-marker
+                  .concept__place-panel.base_panel_info( style='display: none' )
+                     a( href='./places.html##{placeENG}' ) #{place}

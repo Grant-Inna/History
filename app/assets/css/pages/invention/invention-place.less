@@ -1,0 +1,44 @@
+.invention__place {
+   width: 3rem;
+   flex-shrink: 0;
+   
+   //.sm-block({
+   //   min-height: unset;
+   //   margin-right: 0;
+   //   margin-left: auto;
+   //});
+}
+
+.invention__icon.icon-map-marker,
+.invention__icon.icon-map-marker-light {
+   cursor: pointer;
+   .tr();
+   opacity: .6;
+}
+
+.invention__icon.icon-map-marker-light {
+   cursor: default;
+}
+
+.invention__place-panel {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   height: 50px;
+   .flex();
+   .justify-end();
+   text-align: right;
+   background-color: @color-body-back;
+   box-shadow: 0 10px 0 20px #f2f1ec;
+   z-index: 10;
+   
+   .sm-block({
+      box-shadow: -3px 7px 0 12px #f2f1ec;
+      top: 130%;
+      max-width: 100%;
+      width: auto;
+   });
+}
+

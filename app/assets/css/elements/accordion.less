@@ -1,0 +1,119 @@
+.period__tabs {
+   margin-top: 60px;
+}
+
+.period__big_holder {
+   .flex();
+   margin-top: 2.5rem;
+   
+   .sm-block({
+      margin-top: 2rem;
+      .column();
+   })
+}
+.periods__holder {
+   flex-grow: 1;
+   
+   .sm-block({
+      margin-top: 1rem;
+   })
+}
+.period__holder {
+   .flex();
+   .sm-block({
+      flex-direction: row-reverse;
+   })
+}
+.period__big_name {
+   margin-right: 1rem;
+   width: 40%;
+   min-width: 200px;
+   span {
+      .montserrat-regular-18();
+      display: inline-block;
+      margin-bottom: .5rem;
+   }
+   
+   .sm-block({
+      width: 80%;
+   })
+}
+.period__year {
+   .montserrat-light-13-l();
+   width: 80px;
+   flex-shrink: 0;
+   text-align: right;
+   margin-right: 48px;
+   position: relative;
+   
+   .sm-block({
+      margin-right: 30px;
+      color: @color-project-gray;
+   });
+   
+   &:before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 300%;
+      top: -40%;
+      right: -24.5px;
+      background-color: @color-project-blue-light;
+      z-index: 1;
+      
+      .sm-block({
+         height: 540%;
+      });
+   }
+}
+.periods__holder .period__holder:nth-of-type(odd) .period__year {
+   &:after {
+      content: '';
+      position: absolute;
+      height: 13px;
+      width: 13px;
+      top: 3px;
+      right: -30px;
+      border-radius: 50px;
+      background-color: @color-project-blue;
+      z-index: 5;
+      flex-shrink: 0;
+      
+      .sm-block({
+         top: 1px;
+      });
+   }
+}
+.periods__holder .period__holder:nth-of-type(even) .period__year {
+   &:after {
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      top: 3px;
+      right: -28.5px;
+      border-radius: 50px;
+      background-color: @color-project-blue;
+      z-index: 5;
+      flex-shrink: 0;
+   }
+}
+.period__holder {
+   margin-bottom: 1.4rem;
+}
+.period__name  {
+   .montserrat-light-18();
+   margin-top: -2px;
+   margin-bottom: 0.2rem;
+}
+
+.period__about {
+   .sm-block({
+      flex-grow: 1;
+   })
+}
+.period__holder .period__last.period__year:before {
+   .sm-block({
+      height: 200%;
+   })
+}

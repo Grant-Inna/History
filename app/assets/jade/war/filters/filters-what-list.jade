@@ -1,0 +1,13 @@
+.filters__holder
+   #removeFilters.filters.filter__remove( style='display: none' )
+      .filter__chosen
+      .filter__icon.icon-cross
+   #triggerFilters.filters
+      span Сражение
+   #Filters.filters__list( style='display: none' )
+      include __filter-item
+      +filter( 'Внутреннее', 'recycle' )
+      +filter( 'Международнее', 'international' )
+      +filter( 'Часть войны', 'part' )
+      +filter( 'Одиночное', 'alone' )
+

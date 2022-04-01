@@ -1,0 +1,22 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Хронология' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Хронология', '')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/timeline/timeline-tabs
+
+
+
+
+   include ../assets/jade/static/footer
+

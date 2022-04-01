@@ -1,0 +1,26 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Личности в истории' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Личности в', 'истории')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/person/filters/filters-list
+               include ../assets/jade/person/person/person-list
+
+
+
+
+
+
+
+   include ../assets/jade/static/footer
+

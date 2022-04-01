@@ -1,0 +1,20 @@
+mixin image( sphere, link, imageAmount, img1, img2, img3 )
+   case (imageAmount)
+      when '1'
+         .info_image.base_panel_info( style='display: none' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img1}' )
+      when '2'
+         .info_image.base_panel_info( style='display: none' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img1}' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img2}' )
+      when '3'
+         .info_image.base_panel_info( style='display: none' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img1}' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img2}' )
+            .base_panel_image
+               img( src='../assets/img/#{sphere}/#{link}/#{img3}' )

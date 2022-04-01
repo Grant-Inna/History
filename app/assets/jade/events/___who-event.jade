@@ -1,0 +1,50 @@
+mixin who( whoAmount, who, who2, who3, whoENG, whoENG2, whoENG3 )
+   case (whoAmount)
+      when ''
+         .event__person
+            .event__icon.icon-person-light
+      when '1'
+         .event__person
+            .event__icon.icon-person
+            .event__person-panel.panel-extra-info( style='display: none' )
+               case (whoENG)
+                  when ''
+                     span #{who}
+                  default
+                     a( href='./persons.html##{whoENG}' ) #{who}
+      when '2'
+         .event__person
+            .event__icon.icon-person
+            .event__person-panel.panel-extra-info( style='display: none' )
+               case (whoENG)
+                  when ''
+                     span #{who}
+                  default
+                     a( href='./persons.html##{whoENG}' ) #{who}
+               | ,&nbsp;
+               case (whoENG2)
+                  when ''
+                     span #{who2}
+                  default
+                     a( href='./persons.html##{whoENG2}' ) #{who2}
+      when '3'
+         .event__person
+            .event__icon.icon-person
+            .event__person-panel.panel-extra-info( style='display: none' )
+               case (whoENG)
+                  when ''
+                     span #{who}
+                  default
+                     a( href='./persons.html##{whoENG}' ) #{who}
+               | ,&nbsp;
+               case (whoENG2)
+                  when ''
+                     span #{who2}
+                  default
+                     a( href='./persons.html##{whoENG2}' ) #{who2}
+               | ,&nbsp;
+               case (whoENG3)
+                  when ''
+                     span #{who3}
+                  default
+                     a( href='./persons.html##{whoENG3}' ) #{who3}

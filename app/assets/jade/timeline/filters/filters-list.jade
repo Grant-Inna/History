@@ -1,0 +1,41 @@
+mixin filter( mt )
+   .filters__holder( class='#{mt}' )
+      #Filters_slider_icon.icon-sliders.base_icon-big
+      #Filters_close_icon.icon-cross.base_icon-big( style='display: none' )
+      #Filter_chosen_panel.filters( style='display: none' )
+         .filter__chosen_text
+         .filter__icon.icon-cross.base_icon
+      .filters__trigger_holder
+         .filters__list_trigger.filters( data-filter-type='type' )
+            span Фильтр&nbsp;
+            span по типу
+         .filters__list_trigger.filters( data-filter-type='century' )
+            span Фильтр&nbsp;
+            span по векам
+
+      #Filter_type-type.filters__list( style='display: none' )
+         include ../../mixins/__filter-item
+         +filter( 'Рождение', 'birth' )
+         +filter( 'Смерть', 'death' )
+         +filter( 'Воцарение', 'crown' )
+         +filter( 'Реформа', 'reforma')
+         +filter( 'Революция', 'bomb' )
+         +filter( 'Восстание', 'fire' )
+         +filter( 'Изобретение', 'drafting_compass' )
+         +filter( 'Открытие', 'compass' )
+         +filter( 'Война', 'war' )
+         +filter( 'Геноцид', 'crossbones' )
+         +filter( 'Союз', 'diagram' )
+         +filter( 'Перемирие', 'peace' )
+         +filter( 'Битва', 'battle' )
+         +filter( 'Катастрофа', 'meteor' )
+         +filter( 'Строительство', 'construction' )
+      #Filter_type-century.filters__list( style='display: none' )
+         include ../../mixins/__filter-item
+         +filter( 'До нашей эры', 'dice' )
+         +filter( '0 - 1000', 'dice-one' )
+         +filter( '1000 - 1400', 'dice-two' )
+         +filter( '1400 - 1700', 'dice-three' )
+         +filter( '1700 - 1850', 'dice-four' )
+         +filter( '1850 - 1950', 'dice-five' )
+         +filter( '1950 - 2000', 'dice-six' )

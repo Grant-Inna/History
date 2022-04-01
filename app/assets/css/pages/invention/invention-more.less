@@ -1,0 +1,91 @@
+.invention__about{
+   flex-grow: 1;
+   margin-top: .3rem;
+   .column();
+   //.sm-block({
+   //   margin-left: 2.4rem;
+   //   width: 100%;
+   //   flex-grow: 1;
+   //});
+   
+   .invention__more {
+      .flex();
+      .justify-end();
+      .items-end();
+      cursor: pointer;
+      margin-top: auto;
+      width: 50%;
+      font-size: 1.4rem;
+      
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      
+      z-index: 10;
+      
+      .sm-block({
+         bottom: 2px;
+         right: 0;
+      });
+      
+      .icon-more {
+         .tr();
+         opacity: .6;
+         margin-right: -3px;
+      }
+      
+   }
+}
+
+.invention__icon.invention__more {
+   text-align: right;
+}
+.invention__more-panel .invention__icon {
+   width: unset;
+   opacity: 1;
+}
+.invention__icon .icon-cross {
+   display: block;
+   opacity: 1;
+   transform: scale(1.12);
+   cursor: pointer;
+}
+
+.invention__about p {
+   
+   &.invention__about-main {
+      margin-bottom: .6rem;
+   };
+}
+
+.invention__more-panel{
+   position: absolute;
+   top: 2rem;
+   left: 0;
+   min-height: 700px;
+   border-radius: 2px;
+   
+   display: none;
+   .tr();
+   
+   background-color: @color-body-back;
+   z-index: 9999;
+   padding-bottom: 1rem;
+   padding-left: .5rem;
+   padding-right: .4rem;
+   p {
+      background-color: @color-body-back;
+      margin-bottom: .3rem;
+   }
+}
+
+
+@keyframes rotate {
+   0% {
+      transform: scale(1.12);
+   }
+   100% {
+      transform: scale(1.1) rotate(180deg);
+   }
+   
+}

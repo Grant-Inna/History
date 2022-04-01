@@ -1,0 +1,41 @@
+doctype
+html
+   head
+      meta( name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0" )
+      meta( http-equiv="X-UA-Compatible", content="IE=edge" )
+      meta( name="MobileOptimized" content="width" )
+      meta( name="HandheldFriendly", content="True" )
+      meta( charset = "UTF-8")
+      title Уроки итории от Клима Жукова
+      link( rel="shortcut icon" href="assets/data/favicon.svg" type="image/x-icon" )
+      link( type="text/css" rel="stylesheet" href="assets/css/style.css" )
+
+      <!--[if IE 9]><link type="text/css" rel="stylesheet" href="assets/css/no-flex.css"><![endif]-->
+      <!--[if IE 7]><link type="text/css" rel="stylesheet" href="assets/css/fontello-ie7.css"><![endif]-->
+      include assets/jade/static/first-css
+
+
+   body
+      #container
+         #bg
+
+         header.header__holder.wrapper
+            a( href="../index.html", data-trigger="index-tooltip" ).header__title.h1.bedas.text-white
+               h2 Уроки&nbsp;истории
+                  span от Клима&nbsp;Жукова
+                     sup ?
+            include assets/jade/static/socials
+         include assets/jade/menu/menu
+         include assets/jade/static/disclaimer
+
+
+
+   footer.footer__holder
+      .wrapper.footer__content
+         .footer__author  &copy;&nbsp;2021–2022&nbsp;&nbsp;Инна Грант • elGranto
+
+   script( src='./assets/js/jquery.js' )
+   script( src='./assets/js/build.js' )
+
+
+

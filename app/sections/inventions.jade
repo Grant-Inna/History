@@ -1,0 +1,27 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Изобретения и названия' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Изобретения и', 'названия')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/inventions/filter/filters-list
+               include ../assets/jade/inventions/inventions-list
+
+
+
+
+
+
+
+
+   include ../assets/jade/static/footer
+

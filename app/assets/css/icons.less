@@ -1,0 +1,484 @@
+@font-face {
+   font-family: 'Line Awesome Free';
+   font-style: normal;
+   font-weight: 400;
+   font-display: auto;
+   src: url("../fonts/Line-awesome/la-regular-400.eot");
+   src: url("../fonts/Line-awesome/la-regular-400.eot?#iefix") format("embedded-opentype"), url("../fonts/Line-awesome/la-regular-400.woff2") format("woff2"), url("../fonts/Line-awesome/la-regular-400.woff") format("woff"), url("../fonts/Line-awesome/la-regular-400.ttf") format("truetype"), url("../fonts/Line-awesome/la-regular-400.svg#lineawesome") format("svg"); }
+
+.lar() {
+   font-family: 'Line Awesome Free';
+   font-weight: 400;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1;
+}
+
+@font-face {
+   font-family: 'Line Awesome Brands';
+   font-style: normal;
+   font-weight: normal;
+   font-display: auto;
+   src: url("../fonts/Line-awesome/la-brands-400.eot");
+   src: url("../fonts/Line-awesome/la-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/Line-awesome/la-brands-400.woff2") format("woff2"), url("../fonts/Line-awesome/la-brands-400.woff") format("woff"), url("../fonts/Line-awesome/la-brands-400.ttf") format("truetype"), url("../fonts/Line-awesome/la-brands-400.svg#lineawesome") format("svg"); }
+
+.lab() {
+   font-family: 'Line Awesome Brands';
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1;
+}
+@font-face {
+   font-family: 'Line Awesome Free';
+   font-style: normal;
+   
+   font-display: auto;
+   src: url("../fonts/Line-awesome/la-solid-900.eot");
+   src: url("../fonts/Line-awesome/la-solid-900.eot?#iefix") format("embedded-opentype"), url("../fonts/Line-awesome/la-solid-900.woff2") format("woff2"), url("../fonts/Line-awesome/la-solid-900.woff") format("woff"), url("../fonts/Line-awesome/la-solid-900.ttf") format("truetype"), url("../fonts/Line-awesome/la-solid-900.svg#lineawesome") format("svg"); }
+
+.la() {
+   font-family: 'Line Awesome Free';
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1;
+   font-weight: 100;
+}
+
+/* main page menu */
+
+.item__icon {
+   height: 93px;
+   width: 75px;
+   margin: 0 auto 1.5rem;
+   
+   background-position: bottom;
+   background-size: contain;
+   background-repeat: no-repeat;
+   
+   .xs( margin-bottom, 1rem )
+}
+
+.item__icon-places { width: 90px; }
+.item__icon-concepts { width: 70px; }
+.item__icon-peoples { height: 90px }
+.item__icon-terms { width: 70px; }
+.item__icon-civilization { width: 80px; }
+.item__icon-weapon { width: 72px; } // transform: rotateY(180deg)
+
+/* socials */
+
+.social__icon {
+   font-weight: 400;
+   font-size: 1.3rem;
+   
+   .tr();
+}
+
+.icon-youtube {
+   .lab();
+   &:before {
+      content: "\f167"; }
+}
+.icon-telegram {
+   .lab();
+   &:before {
+      content: "\f2c6"; }
+}
+.icon-vk {
+   .lab();
+   &:before {
+      content: "\f189"; }
+}
+.icon-instagram {
+   .lab();
+   &:before {
+      content: "\f16d"; }
+}
+.icon-sponsr {
+   position: relative;
+   width: 1.3rem;
+   height: 1.3rem;
+   
+   transform-style: preserve-3d;
+   perspective: 600px;
+   margin-top: 2px;
+   
+   .icon-sponsr-front,
+   .icon-sponsr-back {
+      position: absolute;
+      width: 1.3rem;
+      height: 1.3rem;
+      transform-style: preserve-3d;
+      transition: all 0.5s cubic-bezier(0.63, 0.63, 0.72, 1.38);
+      backface-visibility: hidden;
+   }
+   .icon-sponsr-back {
+      .sponsr();
+      transform: rotateY(-180deg);
+   }
+   .icon-sponsr-front {
+      .sponsr-xx();
+      transform: rotateY(0deg);
+   }
+}
+
+.icon-question() {
+   .la();
+   &:before {
+  content: "\f059"; }
+}
+
+/* icon */
+
+.icon-birth {
+   .la();
+   &:before {
+      content: "\f1fd"; }
+}
+.icon-death {
+   .la();
+   &:before {
+      content: "\f54c"; }
+}
+.icon-crown {
+   .la();
+   &:before {
+      content: "\f521"; }
+}
+.icon-peace {
+   .la();
+   &:before {
+      content: "\f67c"; }
+}
+.icon-bomb {
+   .la();
+   &:before {
+      content: "\f1e2"; }
+}
+.icon-fire {
+   .lab();
+   &:before {
+      content: "\f3b1"; }
+}
+.icon-pencil {
+   .la();
+   &:before {
+      content: "\f5ae"; }
+}
+.icon-drafting_compass {
+   .la();
+   &:before {
+      content: "\f568"; }
+}
+
+.icon-compass {
+   .la();
+   &:before {
+      content: "\f14e";
+   }
+}
+.icon-reforma {
+   .la();
+   &:before {
+      content: "\f4d8"; }
+}
+.icon-meteor {
+   .la();
+   &:before {
+      content: "\f753"; }
+}
+.icon-construction {
+   .la();
+   &:before {
+      content: "\f19c"; }
+}
+.icon-war {
+   .la();
+   &:before {
+      content: "\f7b9"; }
+}
+.icon-crossbones {
+   .la();
+   &:before {
+      content: "\f714"; }
+}
+.icon-battle {
+   .la();
+   &:before {
+      content: "\f0e3"; }
+}
+.icon-diagram {
+   .la();
+   &:before {
+      content: "\f542"; }
+}
+.icon-map {
+   .la();
+   &:before {
+      content: "\f279"; }
+}
+.icon-map-marker {
+   .la();
+   &:before {
+      content: "\f59f"; }
+}
+
+.icon-person {
+   .la();
+   &:before {
+      content: "\f4fe"; }
+}
+.icon-image {
+   .la();
+   &:before {
+      content: "\f87c"; }
+}
+
+
+.icon-politic {
+   .lab();
+   &:before {
+      content: "\f425";  }
+}
+.icon-founder {
+   .la();
+   &:before {
+      content: "\f2ce";  }
+}
+.icon-propagandist {
+   .la();
+   &:before {
+      content: "\f519";  }
+}
+.icon-religion {
+   .la();
+   &:before {
+      content: "\f684";  }
+}
+.icon-thinker {
+   .la();
+   &:before {
+      content: "\f665";  }
+}
+.icon-painter {
+   .la();
+   &:before {
+      content: "\f53f";  }
+}
+.icon-architect {
+   .la();
+   &:before {
+      content: "\f557";  }
+}
+.icon-musician {
+   .la();
+   &:before {
+  content: "\f7a6"; }
+}
+.icon-scientist {
+   .la();
+   &:before {
+      content: "\f610";  }
+}
+.icon-atom {
+   .la();
+   &:before {
+      content: "\f5d2";  }
+}
+.icon-writer {
+   .la();
+   &:before {
+      content: "\f56b";  }
+}
+.icon-sportsmen {
+   .la();
+   &:before {
+      content: "\f458";  }
+}
+.icon-tool {
+   .la();
+   &:before {
+      content: "\f7d9";  }
+}
+
+
+.icon-globe {
+   .la();
+   &:before {
+      content: "\f0ac";  }
+}
+.icon-pin {
+   .la();
+   &:before {
+      content: "\f276";  }
+}
+.icon-international {
+   .la();
+   &:before {
+      content: "\f6ff";  }
+}
+.icon-recycle {
+   .la();
+   &:before {
+      content: "\f1b8";  }
+}
+.icon-part {
+   .lab();
+   &:before {
+      content: "\f37b";  }
+}
+.icon-alone {
+   .lab();
+   &:before {
+      content: "\f2d5";  }
+}
+.icon-interclass {
+   .lab();
+   &:before {
+      content: "\f837";  }
+}
+.icon-assimilation {
+   .la();
+   &:before {
+      content: "\f563";  }
+}
+.icon-subordination {
+   .la();
+   &:before {
+      content: "\f61f";  }
+}
+.icon-branch {
+   .la();
+   &:before {
+      content: "\f126";  }
+}
+.icon-market {
+   .lab();
+   &:before {
+      content: "\f838";  }
+}
+.icon-tree {
+   .la();
+   &:before {
+      content: "\f1bb";  }
+}
+
+.icon-normative {
+   .la();
+   &:before {
+      content: "\f610";  }
+}
+.icon-economy {
+   .la();
+   &:before {
+      content: "\f555";  }
+}
+.icon-source {
+   .la();
+   &:before {
+      content: "\f2f6";  }
+}
+.icon-theory {
+   .la();
+   &:before {
+      content: "\f5dc";  }
+}
+
+
+.icon-dice {
+   .la();
+   &:before {
+      content: "\f04d"; }
+}
+.icon-dice-one {
+   .la();
+   &:before {
+      content: "\f525"; }
+}
+.icon-dice-two {
+   .la();
+   &:before {
+      content: "\f528"; }
+}
+.icon-dice-three {
+   .la();
+   &:before {
+      content: "\f527"; }
+}
+.icon-dice-four {
+   .la();
+   &:before {
+      content: "\f524"; }
+}
+.icon-dice-five {
+   .la();
+   &:before {
+      content: "\f523"; }
+}
+.icon-dice-six {
+   .la();
+   &:before {
+      content: "\f526"; }
+}
+
+
+
+
+/* common */
+
+.icon-home {
+   .la();
+   &:before {
+      content: "\f015"; }
+   margin-right: .5rem;
+}
+.icon-arrow {
+   .la();
+   &:before {
+      content: "\f105"; }
+   font-weight: 800;
+   margin: 0 .5rem;
+   .flex();
+   .items-end();
+   
+   font-size: .8rem;
+   text-align: center;
+}
+.icon-sliders {
+   .la();
+   &:before {
+  content: "\f1de"; }
+   
+   color: @color-project-blue-dark;
+   cursor: pointer;
+}
+
+.icon-cross {
+   .la();
+   &:before {
+      content: "\f057"; }
+}
+.icon-more {
+   .la();
+   &:before {
+      content: "\f13a"; }
+}
+
+
+
+
+
+
+

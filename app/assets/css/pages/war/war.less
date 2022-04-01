@@ -1,0 +1,177 @@
+@height-photo: 15rem;
+
+.war__holder {
+   .template_content_holder();
+   margin-top: 3px;
+   position: relative;
+   
+   a {
+      font-weight: 600;
+      .tr();
+   }
+}
+
+.wars__one_war {
+   position: relative;
+   .flex();
+   margin-top: 3.5rem;
+   cursor: default;
+   
+   
+  /* & .war__photo {
+      margin-left: 1rem;
+      margin-right: 0;
+   }
+   
+   & .war__icon div[class^='icon-'], .war__icon div[class^='war__icon-'] {
+      margin-right: 0.5rem;
+      margin-left: 0;
+      text-align: right;
+   }
+   
+   & .war__meta {
+      margin-right: unset;
+      margin-left: auto;
+   }
+   
+   & .war__places {
+      text-align: right;
+   }
+   
+   & .war__about {
+      margin-left: 0;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 2rem;
+      .md-block({
+         padding-right: 0;
+      })
+   }*/
+   
+}
+
+.war__about .war__about-main {
+   .md-block({
+      display: none;
+   });
+}
+
+.war__photo {
+   width: 10rem;
+   height: @height-photo;
+   margin-left: 1rem;
+   flex-shrink: 0;
+   
+   .sm-block({
+      @height-photo: 13rem;
+      width: 8rem;
+      height: @height-photo;
+   });
+   
+   img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+   }
+}
+
+.war__icon {
+   .column();
+   height: @height-photo;
+   
+   .sm-block({
+      @height-photo: 13rem;
+      height: @height-photo;
+   });
+   
+   & div[class^='icon-'],
+   & div[class^='war__icon-'] {
+      display: block;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 1.6rem;
+      font-size: 1.5rem;
+      padding-top: 1px;
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+      opacity: .8;
+   }
+   
+   & .war__icon-constant {
+      height: unset !important;
+      margin-top: auto;
+      margin-bottom: -1px !important;
+   }
+   
+   & .war__icon-constant-second {
+      height: unset !important;
+      margin-top: .5rem;
+      margin-bottom: -1px !important;
+   }
+}
+
+.war__meta {
+   display: flex;
+   flex-direction: column;
+   margin-right: auto;
+   font-weight: 600;
+   max-height: 15rem;
+   .sm-block({
+      @height-photo: 13rem;
+      max-height: @height-photo;
+   });
+   .xs-block({
+      @height-photo: 13rem;
+      max-height: @height-photo;
+   });
+}
+
+.war__years {
+   white-space: nowrap;
+   font-size: 1.3rem;
+   
+   .sm-block({
+      white-space: unset;
+   });
+}
+
+.war__name {
+   font-size: 1.1rem;
+   margin-bottom: .5rem;
+}
+
+.war__places {
+   margin-top: auto;
+   min-height: 1.4rem;
+}
+
+.war__places-second {
+   margin-top: 0.5rem;
+   .sm-block({
+      margin-top: 0.1rem;
+      margin-bottom: -5px;
+   });
+}
+
+.war__about {
+   text-align: justify;
+   margin-left: auto;
+   margin-bottom: 1.5rem;
+   padding-left: 2rem;
+   .lg-block({
+      padding-left: 0;
+   });
+}
+
+.war__about-main {
+   margin-bottom: .5rem;
+   font-weight: 600;
+}
+
+
+.war__holder a {
+   color: @color-project-blue-link;
+}
+
+
+@import "war-more";

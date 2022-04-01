@@ -1,0 +1,24 @@
+.filters__holder
+   #removeFilters.filters.filter__remove( style='display: none' )
+      .filter__chosen
+      .filter__icon.icon-cross.base_icon
+   #filter__trigger.icon-sliders.base_icon-big
+   #filter__close.icon-cross.base_icon-big( style='display: none' )
+   #triggerFilters.filters
+      span Фильтры
+   #Filters.filters__list( style='display: none' )
+      .filter__title Названия
+      include __filter-item
+      +filter( 'Знаки отличия', 'crown' )
+      +filter( 'Оружие', 'battle' )
+      +filter( 'Строение', 'architect' )
+      +filter( 'Орудия', 'tool' )
+      .filter__title Изобретения
+      include __filter-item
+      +filter( 'Военные машины', 'war' )
+      +filter( 'Научные', 'drafting_compass' )
+      +filter( 'Гражданские', 'peace' )
+      //+filter( 'Течение философии', 'thinker' )
+
+
+

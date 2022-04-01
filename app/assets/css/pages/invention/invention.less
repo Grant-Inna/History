@@ -1,0 +1,89 @@
+.inventions__holder {
+   .row();
+   .template_content_holder();
+   margin-top: 3px;
+   position: relative;
+   
+   a {
+      font-weight: 600;
+      .tr();
+   }
+   
+   #back {
+      z-index: 11;
+   }
+}
+.inventions__one_invention {
+   .col();
+   .size(8);
+   .size-md(12);
+   .size-xs(24);
+   
+   position: relative;
+   .column();
+   margin-top: 2rem;
+   cursor: default;
+   
+   .sm( flex-wrap, wrap );
+}
+.invention__image {
+   position: relative;
+   width: 100%;
+   padding-top: 100%;
+   height: auto;
+   margin-right: 1rem;
+   margin-bottom: .5rem;
+   flex-shrink: 0;
+   
+   img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
+}
+.invention__meta {
+   .flex();
+   .justify-between();
+   margin-top: .3rem;
+   margin-bottom: .5rem;
+   
+}
+.invention__icon {
+   width: 2rem;
+   height: 1.6rem;
+   font-size: 1.5rem;
+   opacity: .6;
+}
+.invention__name {
+   font-size: 1.1rem;
+   margin-right: auto;
+   padding-left: 0;
+   min-width: 5rem;
+   max-width: 10rem;
+   font-weight: 600;
+}
+.invention__name-little {
+   font-size: 1rem;
+   margin-right: auto;
+   padding-left: 0;
+   font-weight: 600;
+}
+
+
+
+
+.inventions__holder a {
+   color: @color-project-blue-link;
+   font-weight: 600;
+   .tr();
+}
+
+
+@import "invention-place";
+@import "invention-more";

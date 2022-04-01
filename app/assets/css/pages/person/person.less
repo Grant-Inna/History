@@ -1,0 +1,178 @@
+@height-photo: 15rem;
+
+.person__holder {
+   .template_content_holder();
+   margin-top: 3px;
+   position: relative;
+   
+   a {
+      font-weight: 600;
+      .tr();
+   }
+}
+.persons__one_person {
+   position: relative;
+   .flex();
+   margin-top: 3.5rem;
+   cursor: default;
+/*   .md-block({
+      flex-wrap: wrap;
+   });*/
+   
+   &.odd {
+      .person__about .person__about-main {
+         text-align: right;
+      }
+   }
+   
+   &.even {
+      flex-direction: row-reverse;
+      
+      & .person__photo {
+         margin-left: 1rem;
+         margin-right: 0;
+      }
+      & .person__icon div[class^='icon-'], .person__icon div[class^='person__icon-'] {
+         margin-left: 0.5rem;
+         margin-right: 0;
+         text-align: right;
+      }
+      & .person__meta {
+         margin-right: unset;
+         margin-left: auto;
+         
+         > div {
+            text-align: right;
+         }
+      }
+      & .person__places {
+         text-align: right;
+      }
+      & .person__about {
+         margin-left: 0;
+         margin-right: auto;
+         padding-left: 0;
+         padding-right: 2rem;
+         .md-block({
+            padding-right: 0;
+         })
+      }
+   }
+}
+.person__about .person__about-main {
+   .md-block({
+      display: none;
+   });
+}
+.person__photo {
+   width: 10rem;
+   height: @height-photo;
+   margin-right: 1rem;
+   flex-shrink: 0;
+   
+   .sm-block({
+      @height-photo: 13rem;
+      width: 8rem;
+      height: @height-photo;
+   });
+   
+   img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+   }
+}
+.person__icon {
+   .column();
+   height: @height-photo;
+   
+   .sm-block({
+      @height-photo: 13rem;
+      height: @height-photo;
+   });
+   
+   & div[class^='icon-'],
+   & div[class^='person__icon-'] {
+      display: block;
+      flex-shrink: 0;
+      width: 2rem;
+      height: 1.6rem;
+      font-size: 1.5rem;
+      padding-top: 1px;
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+      opacity: .8;
+   }
+   
+   & .person__icon-constant {
+      height: unset !important;
+      margin-top: auto;
+      margin-bottom: -1px !important;
+   }
+   & .person__icon-constant-second {
+      height: unset !important;
+      margin-top: .5rem;
+      margin-bottom: -1px !important;
+   }
+}
+.person__meta {
+   display: flex;
+   flex-direction: column;
+   margin-right: auto;
+   font-weight: 600;
+   max-height: 15rem;
+   .sm-block({
+      @height-photo: 13rem;
+      max-height: @height-photo;
+   });
+   .xs-block({
+      @height-photo: 13rem;
+      max-height: @height-photo;
+   });
+}
+.person__years {
+   white-space: nowrap;
+   font-size: 1.3rem;
+   
+   .sm-block({
+      white-space: unset;
+   });
+}
+.person__name {
+   font-size: 1.1rem;
+   margin-bottom: .5rem;
+}
+.person__places {
+   margin-top: auto;
+   min-height: 1.4rem;
+}
+.person__places-second {
+   margin-top: 0.5rem;
+   .sm-block({
+      margin-top: 0.1rem;
+      margin-bottom: -5px;
+   });
+}
+
+.person__about {
+   text-align: justify;
+   margin-left: auto;
+   margin-bottom: 1.5rem;
+   padding-left: 2rem;
+   .lg-block({
+      padding-left: 0;
+   });
+}
+.person__about-main {
+   margin-bottom: .5rem;
+   font-weight: 600;
+}
+
+
+
+.person__holder a {
+   color: @color-project-blue-link;
+}
+
+
+@import "person-more";

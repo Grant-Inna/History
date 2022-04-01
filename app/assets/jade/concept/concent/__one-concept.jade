@@ -1,0 +1,13 @@
+mixin concept( type, id, name, aboutAmount, mainAbout, mainSource, about2, source2 )
+   .concepts__one_concept.element-item( id='#{id}' )
+      .concept__meta
+         .concept__icon
+            div( class='icon-#{type}' )
+         .concept__name #{name}
+      .concept__about
+         include ___about-concept
+         +about( aboutAmount, mainAbout, mainSource, about2, source2  )
+
+
+
+

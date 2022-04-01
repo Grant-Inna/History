@@ -1,0 +1,39 @@
+#back {
+   background-color: @color-project-bg-o;
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 5;
+   
+   display: none;
+}
+.base_icons_holder .icon-cross {
+   z-index: 9999;
+}
+.base_icons_holder .base_icon {
+   cursor: pointer;
+}
+.base_icons_holder .icon-light {
+   cursor: default;
+}
+
+.base_panel_info {
+   cursor: default;
+   a {
+      .montserrat-regular-15();
+      display: inline;
+      color: @color-project-blue-dark;
+      .tr();
+   }
+}
+.base_panel_info a:hover {
+   .hover();
+}
+
+
+@import "row";
+@import "column";

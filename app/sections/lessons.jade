@@ -1,0 +1,23 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Уроки' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Уроки', '')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/lessons/__one-lesson
+
+
+
+
+
+   include ../assets/jade/static/footer
+

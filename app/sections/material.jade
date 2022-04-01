@@ -1,0 +1,21 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Материальная культура' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Материальная культура', '')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/materials/filter/filters-list
+
+
+
+   include ../assets/jade/static/footer
+

@@ -1,0 +1,84 @@
+.person__about span {
+   margin-bottom: .5rem;
+   .lg-block({
+      display: none;
+   })
+}
+.person__about-more-holder {
+   min-height: 15.2rem;
+   position: absolute;
+   top: -1rem;
+   left: 0;
+   right: 0;
+   max-width: 100%;
+   background-color: #f2f1ec;
+   box-shadow: 0 20px 0 6px #f2f1ec;
+}
+.person__about-more {
+   text-align: left;
+   background-color: #f2f1ec;
+   .tr();
+   .sm-block({
+      @height-photo: 13.5rem;
+      min-height: @height-photo;
+   });
+   
+   p,
+   span {
+      display: inline-block;
+      margin-bottom: .5rem;
+   }
+}
+.person__about-more .person__about-main {
+   display: none;
+   .md-block({
+      display: block;
+   });
+}
+
+.person__icon-more-holder {
+   max-height: 15rem;
+   .column();
+   justify-content: flex-end;
+   
+   .sm-block({
+      @height-photo: 13rem;
+      max-height: @height-photo;
+   });
+}
+.person__icon-more {
+   position: absolute;
+   bottom: 0;
+   width: unset;
+   height: unset;
+   font-size: 1.5rem;
+   opacity: .6;
+   margin-bottom: -0.2rem;
+}
+.odd .person__icon-more {
+   right: 0;
+}
+.even .person__icon-more {
+   left: 0;
+}
+
+.persons__one_person .icon-more {
+   .tr();
+}
+
+.persons__one_person.even .person__icon-cross,
+.persons__one_person.odd .person__icon-cross {
+   height: unset;
+   width: 1.4rem;
+   margin-right: 0;
+   margin-bottom: 0.3rem;
+   margin-left: auto;
+   
+   
+   & div[class^='icon-'] {
+      width: auto;
+      height: auto;
+      margin: 0;
+      opacity: 1;
+   }
+}

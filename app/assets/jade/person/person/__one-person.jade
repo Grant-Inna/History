@@ -1,0 +1,47 @@
+mixin person( name, typeAmount, type1, type2, type3, type4, type5, id, century, bc, date, alphabet, img, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount, war, theory )
+   .element-item( id='#{id}', class='#{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
+      .element-column-image
+         img( src='../assets/img/person/#{name}/#{img}' )
+      .element-about-icons
+         include ___type-person
+         +type( typeAmount, type1, type2, type3, type4, type5 )
+      .base_main_info
+         .h3.mb-02 #{name}
+         .h4 #{date}
+      .base_about
+         p.elemnt-about-main #{mainAbout}
+
+      .icons-panel-triggers
+         .base_icons_holder
+            case (theory)
+               when '1'
+                  .icon-trigger-theory
+                     .base_icon.icon-theory( data-info='theory' )
+            case (war)
+               when '1'
+                  .icon-trigger-war
+                     .base_icon.icon-battle( data-info='war' )
+            case (whereAmount)
+               when '1'
+                  .icon-trigger-place
+                     .base_icon.icon-map-marker( data-info='place' )
+            case (whoAmount)
+               when '1'
+                  .icon-trigger-person
+                     .icon-person.base_icon( data-info='person' )
+            case (imageAmount)
+               when '1'
+                  .icon-trigger-image
+                     .icon-image.base_icon( data-info='image' )
+            case (moreAmount)
+               when '0'
+                  .icon-trigger-more
+                     .icon-more.base_icon.icon-light
+                     .icon-cross.base_icon( style='display: none' )
+               default
+                  .icon-trigger-more
+                     .icon-more.base_icon( data-info='more' )
+                     .icon-cross.base_icon( style='display: none' )
+
+
+

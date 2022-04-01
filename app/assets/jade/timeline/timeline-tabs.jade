@@ -1,0 +1,15 @@
+.tabs__holder#tabsDates
+   .tabs__title
+      #triggerPeriod.tablink Периодизация
+      #triggerDates.tablink.active-tab  Датировка
+
+   .tabs__content
+      #Period.tabcontent
+         include ./period/accordion
+
+      #Dates.tabcontent.visible-tab
+         include filters/filters-list
+         +filter('mt-3')
+         include timeline/timeline-list
+
+

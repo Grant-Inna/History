@@ -1,0 +1,47 @@
+mixin where( whereAmount, where, where2, where3, whereENG, whereENG2, whereENG3 )
+   case (whereAmount)
+      when '1'
+         .event__place
+            .event__icon.icon-map-marker
+            .event__place-panel.panel-extra-info( style='display: none' )
+               case (whereENG)
+                  when ''
+                     span #{where}
+                  default
+                     a( href='./places.html##{whereENG}' ) #{where}
+      when '2'
+         .event__place
+            .event__icon.icon-map-marker
+            .event__place-panel.panel-extra-info( style='display: none' )
+               case (whereENG)
+                  when ''
+                     span #{where}
+                  default
+                     a( href='./places.html##{whereENG}' ) #{where}
+               | ,&nbsp;
+               case (whereENG2)
+                  when ''
+                     span #{where2}
+                  default
+                     a( href='./places.html##{whereENG2}' ) #{where2}
+      when '3'
+         .event__place
+            .event__icon.icon-map-marker
+            .event__place-panel.panel-extra-info( style='display: none' )
+               case (whereENG)
+                  when ''
+                     span #{where}
+                  default
+                     a( href='./places.html##{whereENG}' ) #{where}
+               | ,&nbsp;
+               case (whereENG2)
+                  when ''
+                     span #{where2}
+                  default
+                     a( href='./places.html##{whereENG2}' ) #{where2}
+               | ,&nbsp;
+               case (whereENG3)
+                  when ''
+                     span #{where3}
+                  default
+                     a( href='./places.html##{whereENG3}' ) #{where3}

@@ -1,0 +1,11 @@
+mixin item(name, tooltip, h3, about)
+   a( href='./sections/#{tooltip}.html', data-trigger="#{tooltip}-tooltip" ).menu__item
+      object.item__icon( type="image/svg+xml", data="assets/data/menu/animated/#{tooltip}.svg", class="item__icon-#{tooltip}" )
+         img( src='assets/data/menu/#{tooltip}.svg' )
+      .item__text.text-black #{name}
+   .menu__itemTooltip( id='#{tooltip}-tooltip' )
+      .tooltip__holder
+         .tooltip__arrow
+         .tooltip__content.wrapper
+            h3.h3 #{h3}
+            p #{about}

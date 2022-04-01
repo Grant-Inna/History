@@ -1,0 +1,14 @@
+.filters__holder
+   #removeFilters.filters.filter__remove( style='display: none' )
+      .filter__chosen
+      .filter__icon.icon-cross
+   #triggerFilters.filters
+      span Итог
+   #Filters.filters__list( style='display: none' )
+      include __filter-item
+      +filter( 'Заключение мирного договора', 'peace' )
+      +filter( 'Захват и подчинение', 'subordination' )
+      +filter( 'Захват и уничтожение', 'crossbones' )
+      +filter( 'Захват и ассимиляция', 'assimilation' )
+      +filter( 'Отделение', 'branch' )
+

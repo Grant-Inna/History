@@ -1,0 +1,14 @@
+.filters__holder
+   #removeFilters.filters.filter__remove( style='display: none' )
+      .filter__chosen
+      .filter__icon.icon-cross
+   #triggerFilters-why.filters
+      span Причины
+   #Filters-why.filters__list( style='display: none' )
+      include __filter-item
+      +filter( 'Власть', 'crown' )
+      +filter( 'Земли', 'map' )
+      +filter( 'Влияние', 'founder' )
+      +filter( 'Ресурсы', 'scientist' )
+      +filter( 'Рынки сбыта', 'market' )
+

@@ -1,0 +1,102 @@
+@import "elements-hover";
+
+.menu__item:hover .item__text{
+   .hover();
+}
+
+.social__holder:hover {
+   .tr();
+   text-shadow: 0 0 7px white;
+   
+   .icon-sponsr {
+      .icon-sponsr-back {
+         transform: rotateY(0deg);
+         z-index: 1;
+      }
+      .icon-sponsr-front {
+         transform: rotateY(180deg);
+         z-index: 0;
+      }
+   }
+}
+
+.breadcrumbs__main:hover {
+   .breadcrumbs__text {
+      opacity: 1;
+      .hover();
+   }
+   .breadcrumbs__icon {
+      opacity: 1;
+      .hover();
+   }
+}
+
+
+.tablink:not(.active-tab):hover {
+   opacity: .8;
+   cursor: pointer;
+   .tr();
+}
+
+.filters:hover {
+   & span,
+   & .filter__chosen_text {
+      color: @color-black;
+      .hover();
+   }
+   .icon-cross {
+      transform: rotate(180deg) translateY(1px);
+      .tr();
+   }
+}
+.icon-cross:hover {
+   transform: rotate(180deg) translateY(1px);
+   .tr();
+}
+
+.filters__item:hover .filter__text,
+.filters__subtitle:hover > .filter__text {
+   .hover();
+}
+
+.timeline__item:hover {
+   .timeline__date {
+      .hover();
+   }
+}
+
+//.icon-trigger-place .icon-map-marker:hover,
+//.icon-trigger-place .icon-map-marker.show
+//{
+//   opacity: 1;
+//   transform: scale(1.1);
+//   .tr();
+//}
+//.icon-trigger-person .icon-person:hover,
+//.icon-trigger-person .icon-person.show {
+//   opacity: 1;
+//   transform: scale(1.2);
+//   .tr();
+//}
+
+
+.person__holder {
+   a:hover {
+      .tr();
+      font-size: 1.2rem;
+      transform: translateY(3px);
+   }
+}
+a.person__places:hover {
+   .tr();
+   font-size: 1.1rem;
+}
+.person__icon-cross:hover .icon-cross {
+   animation: rotate .25s ease-in;
+}
+.invention__icon:hover .icon-cross {
+   animation: rotate .25s ease-in;
+}
+.concept__icon:hover .icon-cross {
+   animation: rotate .25s ease-in;
+}

@@ -1,0 +1,50 @@
+mixin text( moreAmount, text, text2, text3, text4, text5 )
+   case ( moreAmount )
+      default
+         .invention__more
+            .icon-cross.base_icon( style='display: none' )
+      when '1'
+         .invention__more-panel.base_panel_info( style='display: none', id='#{link}-tooltip' )
+            .flex.mb-05
+               h3.invention__name-little #{name}
+               .invention__icon
+                  .icon-cross.base_icon
+            p #{text}
+      when '2'
+         .invention__more-panel.base_panel_info( style='display: none', id='#{link}-tooltip' )
+            .flex.mb-05
+               h3.invention__name-little #{name}
+               .invention__icon
+                  .icon-cross.base_icon
+            p #{text}
+            p #{text2}
+      when '3'
+         .invention__more-panel.base_panel_info( style='display: none', id='#{link}-tooltip' )
+            .flex.mb-05
+               h3.invention__name-little #{name}
+               .invention__icon
+                  .icon-cross.base_icon
+            p #{text}
+            p #{text2}
+            p #{text3}
+      when '4'
+         .invention__more-panel.base_panel_info( style='display: none', id='#{link}-tooltip' )
+            .flex.mb-05
+               h3.invention__name-little #{name}
+               .invention__icon
+                  .icon-cross.base_icon
+            p #{text}
+            p #{text2}
+            p #{text3}
+            p #{text4}
+      when '5'
+         .invention__more-panel.base_panel_info( style='display: none', id='#{link}-tooltip' )
+            .flex.mb-05
+               h3.invention__name-little #{name}
+               .invention__icon
+                  .icon-cross.base_icon
+            p #{text}
+            p #{text2}
+            p #{text3}
+            p #{text4}
+            p #{text5}

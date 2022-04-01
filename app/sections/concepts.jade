@@ -1,0 +1,27 @@
+doctype
+html
+   include ../assets/jade/static/__head
+   +title( 'Уроки Истории | Термины и понятия' )
+
+   body
+      #container
+         #bg
+
+         include ../assets/jade/static/header-pages
+         +caption('Термины и', 'понятия')
+         .wrapper#base_holder
+            #base_content_holder.wrapper
+               include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/concept/filters/filters-list
+               include ../assets/jade/concept/concept/concepts-list
+
+
+
+
+
+
+
+
+   include ../assets/jade/static/footer
+
