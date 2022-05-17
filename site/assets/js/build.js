@@ -75,6 +75,7 @@ $(function () {
       
       $('#Filters_slider_icon').on('click', function (event) { // при нажтии на иконку слайдера всё начинается
          event.stopPropagation();
+         $( '#Filter_help' ).fadeOut(100);
          // скрытие #Filters_slider_icon, #Filters_close_icon и .filters__list_trigger
          hideFilters_slider_icon__showSome();
          
@@ -293,6 +294,10 @@ $(function () {
          }
       });
       
+      $('#base_content_holder').on('click', function (event) {
+         event.stopPropagation();
+         closeEverything();
+      });
       $back.on('click', function (event) {
          event.stopPropagation();
          closeEverything();
@@ -305,7 +310,8 @@ $(function () {
    
    function closeEverything() {
       $('.up').removeClass('up');
-      $('.base_panel_info').slideUp();
+      $('.base_panel_info').slideUp(100);
+      $('.base_panel').slideUp(100);
       $('#back').hide();
       $('.icon-trigger-more .icon-more').show();
       $('.icon-trigger-more .icon-cross').hide();
@@ -537,7 +543,21 @@ $(document).ready(function(){
       }
    
    }
+      if ( $('#Filters_about').length > 0 ) {
+      
+      let $trigger = $('#Filters_about'),
+          $target = $('#Filter_help');
    
+      $trigger.on( 'mouseenter', function( event ) {
+         event.stopPropagation();
+         $target.fadeIn(100);
+      });
+      $target.on( 'mouseleave', function( event ) {
+         event.stopPropagation();
+         $target.fadeOut(100);
+      });
+      
+   }
    
 });
 
