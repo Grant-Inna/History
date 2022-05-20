@@ -71,28 +71,28 @@ $(function () {
    
    'use strict';
    
-   if ($('#Filters_slider_icon').length) {
+   if ($('#filters_slider_icon').length) {
       
-      $('#Filters_slider_icon').on('click', function (event) { // при нажтии на иконку слайдера всё начинается
+      $('#filters_slider_icon').on('click', function (event) { // при нажтии на иконку слайдера всё начинается
          event.stopPropagation();
-         $( '#Filter_help' ).fadeOut(100);
-         // скрытие #Filters_slider_icon, #Filters_close_icon и .filters__list_trigger
+         $( '#filter_help' ).fadeOut(100);
+         // скрытие #filters_slider_icon, #filters_close_icon и .filters__list_trigger
          hideFilters_slider_icon__showSome();
          
-         // при нажатии на .filters__list_trigger появляется .соответствующий #Filter_type и размывающий задник
+         // при нажатии на .filters__list_trigger появляется .соответствующий #filter_type и размывающий задник
          clickFilters_list_trigger__showFilters_list();
          
-         // при нажатии на .filters__list item появляется #Filter_chosen_panel...
+         // при нажатии на .filters__list item появляется #filter_chosen_panel...
          // ... пропадает размывающий задник, .filters__list и копируется текст выбора...
          clickFilters_list_item__showFilter_chosen_panel();
          
          // происходит фильтрация + сортировка
          clickFilters_list_item__filter();
          
-         // при нажатии на #Filter_chosen_panel пропадает фильтрация и она сама
+         // при нажатии на #filter_chosen_panel пропадает фильтрация и она сама
          clickFilter_chosen_panel__no_filter();
          
-         // при нажатии на #Filters_close_icon или тело страницы пропадает фильтрация и всё закрывается
+         // при нажатии на #filters_close_icon или тело страницы пропадает фильтрация и всё закрывается
          clickFilter_chose_icon__no_filter__close();
          
          // при нажатии на тело закрывается .filters__list
@@ -114,9 +114,9 @@ $(function () {
       
       
       function hideFilters_slider_icon__showSome() {
-         let $slider_icon = $('#Filters_slider_icon'),
+         let $slider_icon = $('#filters_slider_icon'),
             $list_trigger = $('.filters__list_trigger'),
-            $close_icon = $('#Filters_close_icon');
+            $close_icon = $('#filters_close_icon');
          
          $slider_icon.hide();
          $list_trigger.slideDown();
@@ -132,7 +132,7 @@ $(function () {
             $(this).addClass('chosen-list-trigger');
             
             let type = $(this).data('filter-type');
-            $('#Filter_type-' + type).slideDown(300);
+            $('#filter_type-' + type).slideDown(300);
             $back.show();
          });
       }
@@ -140,8 +140,8 @@ $(function () {
       function clickFilters_list_item__showFilter_chosen_panel() {
          let $list = $('.filters__list'),
             $list__item = $('.filters__list .filters__item'),
-            $chosen_panel = $('#Filter_chosen_panel'),
-            $chosen_panel_text = $('#Filter_chosen_panel .filter__chosen_text'),
+            $chosen_panel = $('#filter_chosen_panel'),
+            $chosen_panel_text = $('#filter_chosen_panel .filter__chosen_text'),
             $back = $('#back');
          
          $list__item.on('click', function (event) {
@@ -158,7 +158,7 @@ $(function () {
       
       function clickFilters_list_item__filter() {
          let $list__item = $('.filters__list .filters__item'),
-            $chosen_panel_text = $('#Filter_chosen_panel .filter__chosen_text'),
+            $chosen_panel_text = $('#filter_chosen_panel .filter__chosen_text'),
             
             $holder = $('.elements-holder'),
             $item = $('.element-item-holder');
@@ -185,7 +185,7 @@ $(function () {
       }
       
       function clickFilter_chosen_panel__no_filter() {
-         let $chosen_panel = $('#Filter_chosen_panel'),
+         let $chosen_panel = $('#filter_chosen_panel'),
             
             $holder = $('.elements-holder'),
             $item = $('.element-item-holder');
@@ -200,10 +200,10 @@ $(function () {
       }
       
       function clickFilter_chose_icon__no_filter__close() {
-         let $close_icon = $('#Filters_close_icon'),
-            $slider_icon = $('#Filters_slider_icon'),
+         let $close_icon = $('#filters_close_icon'),
+            $slider_icon = $('#filters_slider_icon'),
             $list_trigger = $('.filters__list_trigger'),
-            $chosen_panel = $('#Filter_chosen_panel'),
+            $chosen_panel = $('#filter_chosen_panel'),
             
             $holder = $('.elements-holder'),
             $item = $('.element-item-holder');
@@ -225,10 +225,10 @@ $(function () {
          event.stopPropagation();
          let $list = $('.filters__list'),
             $back = $('#back'),
-            $slider_icon = $('#Filters_slider_icon'),
-            $close_icon = $('#Filters_close_icon'),
+            $slider_icon = $('#filters_slider_icon'),
+            $close_icon = $('#filters_close_icon'),
             $list_trigger = $('.filters__list_trigger'),
-            $chosen_panel = $('#Filter_chosen_panel'),
+            $chosen_panel = $('#filter_chosen_panel'),
             
             $holder = $('.elements-holder'),
             $item = $('.element-item-holder');
@@ -543,16 +543,19 @@ $(document).ready(function(){
       }
    
    }
-      if ( $('#Filters_about').length > 0 ) {
+      if ( $('#filters_decoding').length > 0 ) {
       
-      let $trigger = $('#Filters_about'),
-          $target = $('#Filter_help');
+      let $trigger = $('#filters_decoding'),
+          $target = $('#filter_help'),
+          $close = $('#filters_decoding .icon-cross');
    
-      $trigger.on( 'mouseenter', function( event ) {
+      $trigger.on( 'click', function( event ) {
+         $(this).addClass('active'); console.log($(this));
          event.stopPropagation();
-         $target.fadeIn(100);
+         $target.fadeToggle(100);
       });
-      $target.on( 'mouseleave', function( event ) {
+      $close.on( 'click', function( event ) {
+         $trigger.removeClass('active');
          event.stopPropagation();
          $target.fadeOut(100);
       });
