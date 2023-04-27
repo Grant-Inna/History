@@ -6,6 +6,7 @@ html {
 body {
    .montserrat-light-15();
    font-size: 1rem;
+   .sm( font-size, 1.1rem );
 }
 
 #container {
@@ -22,6 +23,9 @@ body {
    height: 100%;
    .bg();
    z-index: -1;
+}
+.container-index #bg {
+   filter: grayscale(50%) brightness(40%);
 }
 
 .wrapper {

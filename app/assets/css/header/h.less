@@ -6,10 +6,17 @@
    padding-top: 5.3rem;
    color: @color-project-white;
 }
+.header__holder .h1 {
+   .sm-block({
+      font-size: 3.6rem;
+      line-height: 3.7rem;
+   });
+}
 .header__title {
    min-width: 27rem;
    line-height: 1;
    cursor: default;
+   .sm( margin-bottom, 2rem );
    .xxs( min-width, unset );
    
    span {
@@ -27,9 +34,11 @@ sup {
    width: 20px;
    height: 20px;
    margin-left: 1rem;
-   padding-bottom: .5px;
+   padding-bottom: .4px;
+   padding-left: .4px;
    box-sizing: border-box;
    font-size: .9rem;
+   cursor: help;
    
    border: .5px solid white;
    border-radius: 50px;

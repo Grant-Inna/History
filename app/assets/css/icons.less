@@ -56,6 +56,7 @@
    font-weight: 100;
 }
 
+
 /* main page menu */
 
 .item__icon {
@@ -465,6 +466,93 @@
    cursor: pointer;
 }
 
+/*  */
+.icon-countries() {
+   width: 18px !important;
+   height: 18px !important;
+   border-radius: 50px;
+}
+.icon-africa {
+   .icon-countries();
+   background-color: yellow;
+}
+.icon-europe {
+   .icon-countries();
+   background-color: red;
+}
+.icon-asia {
+   .icon-countries();
+   background-color: coral;
+}
+.icon-north_america {
+   .icon-countries();
+   background-color: cornflowerblue;
+}
+.icon-south_america {
+   .icon-countries();
+   background-color: lightgreen;
+}
+.icon-australia {
+   .icon-countries();
+   background-color: purple;
+}
+.icon-antarctica {
+   .icon-countries();
+   background-color: slategray;
+}
+
+/* img icons */
+
+.icon-img( @name ) {
+   display: inline-block;
+   width: 25px !important;
+   
+   background-image: url("../data/icons/@{name}.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+}
+
+.icon-continent {
+   .icon-img('continent');
+}
+.icon-country {
+   .icon-img('country')
+}
+.icon-region {
+   .icon-img('region')
+}
+.icon-island {
+   .icon-img('island')
+}
+.icon-area {
+   .icon-img('area')
+}
+.icon-river {
+   .icon-img('river')
+}
+.icon-lake {
+   .icon-img('lake')
+}
+.icon-mountain {
+   .icon-img('mountain')
+}
+.icon-building {
+   .icon-img('building')
+}
+.icon-ocean {
+   .icon-img('ocean')
+}
+.icon-sea {
+   .icon-img('sea')
+}
+.icon-city {
+   .icon-img('city')
+}
+
+
+
+/* common */
 .icon-cross {
    .la();
    &:before {

@@ -21,19 +21,24 @@
    .element-about-icons {
       .column();
    }
-   .base_about {
+   .element-item > .base_about {
       text-align: end;
       margin-left: auto;
       max-width: 615px;
       
       .lg-block({
          order: 1;
-         max-width: 70%;
+         max-width: 95%;
+         margin-left: auto;
+      });
+      .sm-block({
+         max-width: 85%;
       });
       .xs-block({
-         max-width: 85%;
          order: unset;
-      })
+      });
+      .xxs-block({
+      });
    }
    
    .base_main_info {
@@ -42,9 +47,11 @@
    
    .base_icons_holder {
       color: @color-project-blue-dark;
+  
       .xs-block({
          flex-direction: column;
          width: 20px;
+         margin-top: -5.2rem;
       });
       
       > div {
@@ -56,39 +63,41 @@
    
    .base_panels {
       position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
+      bottom: 15px;
+      left: 2.4rem;
+      right: 0;
+       .xl-block({
+         //left: 2.4rem;
+         right: 0;
+      });
+      .lg-block({
+         bottom: 20px;
+      });
+      .sm-block({
+         height: auto;
+         bottom: 30px;
+         left: 2.8rem;
+      });
+      .xs-block({
+         right: 23px;
+         bottom: 46px;
+         left: 25px;
+      });
+      .xxs-block({
+         bottom: 58px;
+      });
    }
    
    .base_panel_info {
       position: absolute;
-      top: 0;
-      left: 2.8rem;
-      right: 125px;
+      top: 1vw;
       height: 30px;
-      padding: .25rem 1rem;
+      padding: 0.35rem 1rem 0.25rem;
       box-sizing: border-box;
       border-radius: 2px;
       background-color: @color-white;
       z-index: 9999;
-      
-      .xl-block({
-         left: 3.2rem;
-         right: 135px;
-      });
-      .lg-block({
-         height: 25px;
-         right: 8px;
-      });
-      .sm-block({
-         height: 22px;
-         left: 3.1rem;
-      });
-      .xs-block({
-         right: 28px;
-         left: 0;
-      });
+      .lg( top, -2vw )
    }
    
    .info_more {

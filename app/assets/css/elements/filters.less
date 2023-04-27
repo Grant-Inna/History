@@ -13,8 +13,8 @@
       min-height: 5rem;
    });
 }
-#Filters_slider_icon,
-#Filters_close_icon {
+#filters_slider_icon,
+#filters_close_icon {
    position: absolute;
    top: -2.9rem;
    right: 0;
@@ -22,6 +22,65 @@
    .sm-block({
       top: -2.2rem;
    })
+}
+
+#filters_decoding {
+   position: absolute;
+   .flex-center();
+   top: -2.54rem;
+   right: 3rem;
+   width: 16px;
+   height: 16px;
+   margin-left: 1.7rem;
+   padding-bottom: .2px;
+   padding-left: .2px;
+   box-sizing: border-box;
+   font-size: .1rem;
+   color: @color-project-gray-light;
+   border-color: @color-project-gray-light;
+   animation-name: pppuls;
+   .sm-block({
+      top: -2.05rem;
+   });
+   
+   sup {
+      position: absolute;
+      margin-left: 0;
+   }
+   .icon-cross {
+      position: absolute;
+      color: @color-project-gray;
+      cursor: pointer;
+      background-color: #f2f1ec;
+      padding: 2px;
+      display: none;
+   }
+}
+#filters_decoding:hover sup {
+   width: 24px;
+   height: 24px;
+   color: @color-project-gray;
+   text-shadow: 0 0 0 black;
+}
+#filters_decoding.active {
+   cursor: pointer;
+   
+   sup {
+      display: none;
+      font-size: 0;
+   }
+   .icon-cross {
+      position: absolute;
+      color: @color-project-gray-dark;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 999999;
+      background-color: #f2f1ec;
+      display: block;
+   }
+}
+#filters_decoding.active:hover .icon-cross {
+   color: @color-project-blue-dark;
 }
 .filters__trigger_holder {
    .flex();
@@ -32,7 +91,7 @@
 }
 .filters {
    height: 28px;
-   padding: .25rem 1rem 0;
+   padding: 3px 1rem 0;
    box-sizing: border-box;
    cursor: pointer;
    border-radius: 2px;
@@ -107,6 +166,7 @@
    
    .sm-block({
       width: 13px;
+      margin-right: 12px;
    });
 }
 .filter__text {
@@ -114,12 +174,19 @@
    
    .sm( display, none );
 }
-#Filter_chosen_panel {
+#filter_type-alphabet .filter__text,
+#filter_type-century .filter__text,
+#filter_type-continent .filter__text,
+#filter_type-placetype .filter__text {
+   .sm( display, block );
+}
+#filter_chosen_panel {
    .flex();
    .justify-start();
    .items-center();
    font-size: .8rem;
    padding-bottom: 0.35rem;
+   margin-right: .5rem;
    .xs-block({
       padding: 1.5rem 1rem;
    });
@@ -152,7 +219,7 @@
    }
 }
 
-#Filters_slider_icon {
+#filters_slider_icon {
    margin-left: auto;
 }
 
@@ -191,4 +258,90 @@
 
 .filters {
    display: none;
+}
+
+#filter_help {
+   position: absolute;
+   .flex();
+   .justify-end();
+   width: 100%;
+   flex-grow: 1;
+   z-index: 99999;
+   background-color: @color-project-bg-o;
+   padding-bottom: 2rem;
+   .sm-block({
+      flex-wrap: wrap;
+      background: none;
+   });
+   
+   .filter__text {
+      .sm( display, block );
+   };
+}
+.filters__index {
+   .col();
+   margin-right: 0;
+   margin-bottom: .5rem;
+   background-color: @color-white;
+   z-index: 99999;
+   padding-right: 0.2rem;
+   padding-bottom: 10px;
+   padding-left: 0.2rem;
+   &:first-child {
+      margin-left: 0;
+   }
+   .md( margin-left, 0 );
+   .sm-block({
+      flex-grow: 1;
+      margin-right: 0;
+      margin-left: 0;
+      min-width: 130px;
+      flex-basis: 50%;
+   });
+   .xs-block({
+      margin-right: 0;
+      margin-left: 0;
+   });
+   > .h3, .h5,
+   > .flex.items-center {
+      padding: .4rem .8rem 0;
+   }
+   .filters__item {
+      cursor: default;
+   }
+   .filters__item:hover .filter__text, .filters__subtitle:hover > .filter__text {
+      text-shadow: none;
+   }
+   .filters__item .filter__text, .filters__subtitle > .filter__text {
+      line-height: 1.25rem;
+      font-size: .9rem;
+   }
+   .filter__text span {
+      .montserrat-light-18();
+      margin-left: .3rem;
+      text-decoration: underline;
+   }
+}
+#filter_help_century {
+   .xs( display, none );
+}
+#filter_help_alphabet {
+   .sm( display, none );
+}
+
+
+@keyframes pppuls {
+   0% {
+      box-shadow: 0 0 0 1px rgba( 144, 144, 144, 0.1);
+   }
+   20% {
+      box-shadow: 0 0 0 3px rgba( 144, 144, 144, .2);
+   }
+   35% {
+      box-shadow: 0 0 0 1px rgba( 144, 144, 144, .01);
+   }
+   100% {
+      box-shadow: 0 0 0 0 rgba( 144, 144, 144, .01);
+   }
+   
 }

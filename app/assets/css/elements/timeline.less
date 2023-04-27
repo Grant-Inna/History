@@ -98,6 +98,10 @@
       margin-left: @margin_x2;
       margin-right: @margin_icon;
      transition: all 0s !important;
+      .sm-block ({
+         margin-left: @margin_icon;
+         margin-right: @margin_x2;
+      })
    }
    .timeline__name {
       margin-right: 0;
@@ -107,10 +111,6 @@
       align-self: flex-start;
       .timeline__dates {
          flex-direction: column;
-      }
-      .timeline__icon {
-         margin-left: @margin_icon;
-         margin-right: @margin_x2;
       }
       .timeline__name {
          margin-left: 0;
@@ -127,7 +127,22 @@
 }
 .timeline__icon {
    color: @color-project-blue-dark;
+   
+   .sm-block({
+      margin-left: @margin_icon * 3;
+      margin-right: @margin;
+   })
 }
+.timeline__item:after {
+   .sm-block({
+      height: 12px;
+    width: 12px;
+      top: 0;
+      left: -4px;
+      margin-right: 0;
+   })
+}
+
 .timeline__date {
    .tr();
 }

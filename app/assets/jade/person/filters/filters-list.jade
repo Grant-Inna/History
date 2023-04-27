@@ -1,7 +1,7 @@
 .filters__holder
-   #Filters_slider_icon.icon-sliders.base_icon-big
-   #Filters_close_icon.icon-cross.base_icon-big( style='display: none' )
-   #Filter_chosen_panel.filters( style='display: none' )
+   #filters_slider_icon.icon-sliders.base_icon-big
+   #filters_close_icon.icon-cross.base_icon-big( style='display: none' )
+   #filter_chosen_panel.filters( style='display: none' )
       .filter__chosen_text
       .filter__icon.icon-cross.base_icon
    .filters__trigger_holder
@@ -10,13 +10,13 @@
          span по сфере
       .filters__list_trigger.filters( data-filter-type='century' )
          span Фильтр&nbsp;
-         span по векам
+         span по годам жизни
       .filters__list_trigger.filters( data-filter-type='alphabet' )
          span Фильтр&nbsp;
          span по алфавиту
       include ../../mixins/__filter-item
       include ../../mixins/__filter-item-letter
-   #Filter_type-sphere.filters__list( style='display: none' )
+   #filter_type-sphere.filters__list( style='display: none' )
       +filter( 'Государственный деятель', 'politic' )
       +filter( 'Правитель', 'crown' )
       +filter( 'Военный', 'war' )
@@ -36,7 +36,7 @@
       +filter( 'Музыкант', 'musician' )
       +filter( 'Художник', 'painter' )
       +filter( 'Спортсмен', 'sportsmen' )
-   #Filter_type-century.filters__list( style='display: none' )
+   #filter_type-century.filters__list( style='display: none' )
       +filter( 'До нашей эры', 'dice' )
       +filter( '0 - 1000', 'dice-one' )
       +filter( '1000 - 1400', 'dice-two' )
@@ -44,7 +44,7 @@
       +filter( '1700 - 1850', 'dice-four' )
       +filter( '1850 - 1950', 'dice-five' )
       +filter( '1950 - 2000', 'dice-six' )
-   #Filter_type-alphabet.filters__list( style='display: none' )
+   #filter_type-alphabet.filters__list( style='display: none' )
       +filter-letter( 'А' )
       +filter-letter( 'Б' )
       +filter-letter( 'В' )
@@ -72,3 +72,56 @@
       +filter-letter( 'Э' )
       +filter-letter( 'Ю' )
       +filter-letter( 'Я' )
+
+   #filters_decoding
+      sup ?
+      .icon-cross
+   #filter_help( style='display: none' )
+      .filters__index
+         .h3.mb-05 Сфера деятельности
+         +filter( 'Государственный деятель', 'politic' )
+         +filter( 'Правитель', 'crown' )
+         +filter( 'Военный', 'war' )
+         +filter( 'Завоеватель', 'battle' )
+         +filter( 'Революционер', 'bomb' )
+         +filter( 'Предводитель восстания', 'fire' )
+         +filter( 'Изобретатель', 'drafting_compass' )
+         +filter( 'Основатель', 'founder' )
+         +filter( 'Пропагандист', 'propagandist' )
+         +filter( 'Учёный', 'scientist' )
+         +filter( 'Физик', 'atom' )
+         +filter( 'Открыватель', 'map' )
+         +filter( 'Мыслитель', 'thinker' )
+         +filter( 'Религиозный деятель', 'religion' )
+         +filter( 'Архитектор', 'architect' )
+         +filter( 'Писатель', 'writer' )
+         +filter( 'Музыкант', 'musician' )
+         +filter( 'Художник', 'painter' )
+         +filter( 'Спортсмен', 'sportsmen' )
+      #filter_help_century.filters__index
+         .h3.mb-05 Года жизни
+         +filter( 'До нашей эры', 'dice' )
+         +filter( '0 - 1000', 'dice-one' )
+         +filter( '1000 - 1400', 'dice-two' )
+         +filter( '1400 - 1700', 'dice-three' )
+         +filter( '1700 - 1850', 'dice-four' )
+         +filter( '1850 - 1950', 'dice-five' )
+         +filter( '1950 - 2000', 'dice-six' )
+      #filter_help_alphabet.filters__index
+         .h3 По алфавиту
+         .h5.mb-05 Берётся первая буква
+            br
+            | фамилии или имени
+         .filters__item
+            .filter__text Альберт
+               span Э
+               | нштейн
+         .filters__item
+            .filter__text Владимир Ильич
+               span Л
+               | енин
+         .filters__item
+            .filter__text
+               span.ml-0 Р
+               | амсес II Великий
+

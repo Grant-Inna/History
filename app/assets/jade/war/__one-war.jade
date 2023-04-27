@@ -1,5 +1,5 @@
-mixin item( name, type, type1, type2, type3, century, bc, date, alphabet, link, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount )
-   .events__item.element-item( id='#{link}', class='#{type}__type #{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
+mixin item_war( name, type, type1, type2, type3, century, bc, date, alphabet, link, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount )
+   .events__item.element-item( id='#{link}', class='#{type}__type #{type1}__war #{type2}__why #{type3}__results #{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
       .element-about-icons
          .base_icon( class='icon-#{type}' )
          .base_icon( class='icon-#{type1}' )

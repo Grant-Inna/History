@@ -10,56 +10,64 @@
       .tr();
    }
 }
-
 .wars__one_war {
    position: relative;
    .flex();
    margin-top: 3.5rem;
    cursor: default;
+/*   .md-block({
+      flex-wrap: wrap;
+   });*/
    
-   
-  /* & .war__photo {
-      margin-left: 1rem;
-      margin-right: 0;
+   &.odd {
+      .war__about .war__about-main {
+         text-align: right;
+      }
    }
    
-   & .war__icon div[class^='icon-'], .war__icon div[class^='war__icon-'] {
-      margin-right: 0.5rem;
-      margin-left: 0;
-      text-align: right;
+   &.even {
+      flex-direction: row-reverse;
+      
+      & .war__photo {
+         margin-left: 1rem;
+         margin-right: 0;
+      }
+      & .war__icon div[class^='icon-'], .war__icon div[class^='war__icon-'] {
+         margin-left: 0.5rem;
+         margin-right: 0;
+         text-align: right;
+      }
+      & .war__meta {
+         margin-right: unset;
+         margin-left: auto;
+         
+         > div {
+            text-align: right;
+         }
+      }
+      & .war__places {
+         text-align: right;
+      }
+      & .war__about {
+         margin-left: 0;
+         margin-right: auto;
+         padding-left: 0;
+         padding-right: 2rem;
+         .md-block({
+            padding-right: 0;
+         })
+      }
    }
-   
-   & .war__meta {
-      margin-right: unset;
-      margin-left: auto;
-   }
-   
-   & .war__places {
-      text-align: right;
-   }
-   
-   & .war__about {
-      margin-left: 0;
-      margin-right: auto;
-      padding-left: 0;
-      padding-right: 2rem;
-      .md-block({
-         padding-right: 0;
-      })
-   }*/
-   
 }
-
 .war__about .war__about-main {
    .md-block({
       display: none;
    });
 }
-
 .war__photo {
    width: 10rem;
    height: @height-photo;
-   margin-left: 1rem;
+   margin-right: 1rem;
    flex-shrink: 0;
    
    .sm-block({
@@ -74,7 +82,6 @@
       object-fit: cover;
    }
 }
-
 .war__icon {
    .column();
    height: @height-photo;
@@ -102,14 +109,12 @@
       margin-top: auto;
       margin-bottom: -1px !important;
    }
-   
    & .war__icon-constant-second {
       height: unset !important;
       margin-top: .5rem;
       margin-bottom: -1px !important;
    }
 }
-
 .war__meta {
    display: flex;
    flex-direction: column;
@@ -125,7 +130,6 @@
       max-height: @height-photo;
    });
 }
-
 .war__years {
    white-space: nowrap;
    font-size: 1.3rem;
@@ -134,17 +138,14 @@
       white-space: unset;
    });
 }
-
 .war__name {
    font-size: 1.1rem;
    margin-bottom: .5rem;
 }
-
 .war__places {
    margin-top: auto;
    min-height: 1.4rem;
 }
-
 .war__places-second {
    margin-top: 0.5rem;
    .sm-block({
@@ -162,11 +163,11 @@
       padding-left: 0;
    });
 }
-
 .war__about-main {
    margin-bottom: .5rem;
    font-weight: 600;
 }
+
 
 
 .war__holder a {

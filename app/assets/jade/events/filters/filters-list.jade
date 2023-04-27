@@ -1,8 +1,8 @@
 mixin filter( mt )
    .filters__holder( class='#{mt}' )
-      #Filters_slider_icon.icon-sliders.base_icon-big
-      #Filters_close_icon.icon-cross.base_icon-big( style='display: none' )
-      #Filter_chosen_panel.filters( style='display: none' )
+      #filters_slider_icon.icon-sliders.base_icon-big
+      #filters_close_icon.icon-cross.base_icon-big( style='display: none' )
+      #filter_chosen_panel.filters( style='display: none' )
          .filter__chosen_text
          .filter__icon.icon-cross.base_icon
       .filters__trigger_holder
@@ -16,7 +16,7 @@ mixin filter( mt )
             span Фильтр&nbsp;
             span по алфавиту
 
-      #Filter_type-type.filters__list( style='display: none' )
+      #filter_type-type.filters__list( style='display: none' )
          include ../../mixins/__filter-item
          +filter( 'Рождение', 'birth' )
          +filter( 'Смерть', 'death' )
@@ -33,7 +33,7 @@ mixin filter( mt )
          +filter( 'Битва', 'battle' )
          +filter( 'Катастрофа', 'meteor' )
          +filter( 'Строительство', 'construction' )
-      #Filter_type-century.filters__list( style='display: none' )
+      #filter_type-century.filters__list( style='display: none' )
          include ../../mixins/__filter-item
          +filter( 'До нашей эры', 'dice' )
          +filter( '0 - 1000', 'dice-one' )
@@ -42,7 +42,7 @@ mixin filter( mt )
          +filter( '1700 - 1850', 'dice-four' )
          +filter( '1850 - 1950', 'dice-five' )
          +filter( '1950 - 2000', 'dice-six' )
-      #Filter_type-alphabet.filters__list( style='display: none' )
+      #filter_type-alphabet.filters__list( style='display: none' )
          include ../../mixins/__filter-item-letter
          +filter-letter( 'А' )
          +filter-letter( 'Б' )
@@ -71,3 +71,47 @@ mixin filter( mt )
          +filter-letter( 'Э' )
          +filter-letter( 'Ю' )
          +filter-letter( 'Я' )
+
+      #filters_decoding
+         sup ?
+         .icon-cross
+      #filter_help( style='display: none' )
+         .filters__index
+            .h3.mb-05 Тип события
+            +filter( 'Рождение', 'birth' )
+            +filter( 'Смерть', 'death' )
+            +filter( 'Воцарение', 'crown' )
+            +filter( 'Реформа', 'reforma')
+            +filter( 'Революция', 'bomb' )
+            +filter( 'Восстание', 'fire' )
+            +filter( 'Изобретение', 'drafting_compass' )
+            +filter( 'Открытие', 'compass' )
+            +filter( 'Война', 'war' )
+            +filter( 'Геноцид', 'crossbones' )
+            +filter( 'Союз', 'diagram' )
+            +filter( 'Перемирие', 'peace' )
+            +filter( 'Битва', 'battle' )
+            +filter( 'Катастрофа', 'meteor' )
+            +filter( 'Строительство', 'construction' )
+         #filter_help_century.filters__index
+            .h3.mb-05 По векам
+            +filter( 'До нашей эры', 'dice' )
+            +filter( '0 - 1000', 'dice-one' )
+            +filter( '1000 - 1400', 'dice-two' )
+            +filter( '1400 - 1700', 'dice-three' )
+            +filter( '1700 - 1850', 'dice-four' )
+            +filter( '1850 - 1950', 'dice-five' )
+            +filter( '1950 - 2000', 'dice-six' )
+         #filter_help_alphabet.filters__index
+            .h3 По алфавиту
+            .h5.mb-05 Берётся первая буква
+               br
+               | названия
+            .filters__item
+               .filter__text Война с
+                  span Х
+                  | еттами
+            .filters__item
+               .filter__text Отмена
+                  span К
+                  | репостного права

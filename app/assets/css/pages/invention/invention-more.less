@@ -14,14 +14,12 @@
       .items-end();
       cursor: pointer;
       margin-top: auto;
-      width: 50%;
+      width: 100%;
       font-size: 1.4rem;
       
       position: absolute;
       bottom: 0;
       right: 0;
-      
-      z-index: 10;
       
       .sm-block({
          bottom: 2px;
@@ -48,7 +46,6 @@
    display: block;
    opacity: 1;
    transform: scale(1.12);
-   cursor: pointer;
 }
 
 .invention__about p {
@@ -58,15 +55,15 @@
    };
 }
 
-.invention__more-panel{
+.concept__more-panel{
+   height: 0;
    position: absolute;
    top: 2rem;
    left: 0;
-   min-height: 700px;
+   min-height: 150px;
    border-radius: 2px;
    
    display: none;
-   .tr();
    
    background-color: @color-body-back;
    z-index: 9999;
@@ -76,6 +73,18 @@
    p {
       background-color: @color-body-back;
       margin-bottom: .3rem;
+   }
+}
+
+.inventions__one_concept .icon-cross {
+   display: none;
+}
+
+
+.inventions__one_concept.open {
+   z-index: 1000;
+   .icon-more {
+      display: none;
    }
 }
 

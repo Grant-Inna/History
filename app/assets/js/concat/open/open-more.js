@@ -39,6 +39,10 @@ $(function () {
          }
       });
       
+      $('#base_content_holder').on('click', function (event) {
+         event.stopPropagation();
+         closeEverything();
+      });
       $back.on('click', function (event) {
          event.stopPropagation();
          closeEverything();
@@ -51,7 +55,8 @@ $(function () {
    
    function closeEverything() {
       $('.up').removeClass('up');
-      $('.base_panel_info').slideUp();
+      $('.base_panel_info').slideUp(100);
+      $('.base_panel').slideUp(100);
       $('#back').hide();
       $('.icon-trigger-more .icon-more').show();
       $('.icon-trigger-more .icon-cross').hide();

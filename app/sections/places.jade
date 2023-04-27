@@ -1,7 +1,7 @@
 doctype
 html
    include ../assets/jade/static/__head
-   +title( 'Уроки Истории | Места' )
+   +title( ' Места' )
 
    body
       #container
@@ -12,6 +12,9 @@ html
          .wrapper#base_holder
             #base_content_holder.wrapper
                include ../assets/jade/breadcrumbs/__breadcrumbs
+
+               include ../assets/jade/places/filters/filters-list
+               include ../assets/jade/places/places/places-list
 
 
 

@@ -1,8 +1,8 @@
 mixin filter( mt )
    .filters__holder( class='#{mt}' )
-      #Filters_slider_icon.icon-sliders.base_icon-big
-      #Filters_close_icon.icon-cross.base_icon-big( style='display: none' )
-      #Filter_chosen_panel.filters( style='display: none' )
+      #filters_slider_icon.icon-sliders.base_icon-big
+      #filters_close_icon.icon-cross.base_icon-big( style='display: none' )
+      #filter_chosen_panel.filters( style='display: none' )
          .filter__chosen_text
          .filter__icon.icon-cross.base_icon
       .filters__trigger_holder
@@ -11,7 +11,7 @@ mixin filter( mt )
          .filters__list_trigger.filters( data-filter-type='century' )
             span Фильтр векам
 
-      #Filter_type-type.filters__list( style='display: none' )
+      #filter_type-type.filters__list( style='display: none' )
          include ../../mixins/__filter-item
          +filter( 'Рождение', 'birth' )
          +filter( 'Смерть', 'death' )
@@ -28,7 +28,7 @@ mixin filter( mt )
          +filter( 'Битва', 'battle' )
          +filter( 'Катастрофа', 'meteor' )
          +filter( 'Строительство', 'construction' )
-      #Filter_type-century.filters__list( style='display: none' )
+      #filter_type-century.filters__list( style='display: none' )
          include ../../mixins/__filter-item
          +filter( 'До нашей эры', 'dice' )
          +filter( '0 - 1000', 'dice-one' )
