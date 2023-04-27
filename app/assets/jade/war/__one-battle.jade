@@ -1,0 +1,46 @@
+mixin item_battle( name, type, type1, type2, type3, century, bc, date, alphabet, link, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount )
+   .events__item.element-item( id='#{link}', class='#{type}__type #{type1}__battle #{type2}__why #{type3}__results #{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
+      .element-about-icons
+         .base_icon( class='icon-#{type}' )
+         .base_icon( class='icon-#{type1}' )
+         .base_icon( class='icon-#{type2}' )
+         .base_icon( class='icon-#{type3}' )
+      .events__dates.base_main_info
+         .event__date.h3.mb-02 #{date}
+         .event__name.h4.mb-05.text-black #{name}
+      .base_about
+         p.elemnt-about-main #{mainAbout}
+
+      .icons-panel-triggers
+         .base_icons_holder
+            case (whereAmount)
+               when '0'
+                  .icon-trigger-place
+                     .base_icon.icon-map-marker.icon-light
+               default
+                  .icon-trigger-place
+                     .base_icon.icon-map-marker( data-info='place' )
+            case (whoAmount)
+               when '0'
+                  .icon-trigger-person
+                     .icon-person.base_icon.icon-light
+               default
+                  .icon-trigger-person
+                     .icon-person.base_icon( data-info='person' )
+            case (imageAmount)
+               when '0'
+                  .icon-trigger-image
+                     .icon-image.base_icon.icon-light
+               default
+                  .icon-trigger-image
+                     .icon-image.base_icon( data-info='image' )
+            case (moreAmount)
+               when '0'
+                  .icon-trigger-more
+                     .icon-more.base_icon.icon-light
+                     .icon-cross.base_icon( style='display: none' )
+               default
+                  .icon-trigger-more
+                     .icon-more.base_icon( data-info='more' )
+                     .icon-cross.base_icon( style='display: none' )
+

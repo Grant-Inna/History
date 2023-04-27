@@ -1,0 +1,39 @@
+mixin about( mainAbout, aboutAmount, about1, about2, about3, about3, about4 )
+   case (aboutAmount)
+      when '1'
+         .person__about
+               h3.person__about-main #{mainAbout}
+               span #{about1}
+         .person__icon-more-holder.lg-show
+            .person__icon-more.icon-more
+         .person__about-more-holder.lg-show( style='display: none' )
+            .person__icon.person__icon-cross.base_icon
+               .icon-cross.base_icon
+            .person__about-more
+               h3.person__about-main #{mainAbout}
+               span #{about1}
+      default
+         .person__about
+            h3.person__about-main #{mainAbout}
+            span #{about1}
+         .person__icon-more-holder
+            .person__icon-more.icon-more
+         .person__about-more-holder( style='display: none' )
+            .person__icon.person__icon-cross.base_icon
+               .icon-cross.base_icon
+            .person__about-more
+               h3.person__about-main #{mainAbout}
+               span #{about1}
+               case (aboutAmount)
+                  when '2'
+                     p #{about2}
+                  when '3'
+                     p #{about2}
+                     p #{about3}
+                  when '4'
+                     p #{about2}
+                     p #{about3}
+                     p #{about4}
+
+
+
