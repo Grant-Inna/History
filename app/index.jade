@@ -7,7 +7,7 @@ html
       meta( name="HandheldFriendly", content="True" )
       meta( charset = "UTF-8")
       title Уроки итории от Клима Жукова
-      link( rel="shortcut icon" href="assets/data/favicon.svg" type="image/x-icon" )
+      link( rel="shortcut icon" href="./assets/data/favicon/favicon.svg" type="image/x-icon" )
       link( type="text/css" rel="stylesheet" href="assets/css/style.css" )
 
       <!--[if IE 9]><link type="text/css" rel="stylesheet" href="assets/css/no-flex.css"><![endif]-->
@@ -32,10 +32,14 @@ html
 
    footer.footer__holder
       .wrapper.footer__content
-         .footer__author  &copy;&nbsp;2021–2024&nbsp;&nbsp;Инна Грант • elGranto
+         .footer__author  &copy;&nbsp;2021–
+            span.footer__year
+            | &nbsp;&nbsp;Инна Грант • elGranto
 
    script( src='./assets/js/jquery.js' )
    script( src='./assets/js/build.js' )
+   script.
+      $('span.footer__year').text(new Date().getFullYear())
 
 
 
