@@ -1,16 +1,24 @@
-mixin invention( type, link, img, name, place, placeENG, mainAbout, moreAmount, text, text2, text3, text4, text5 )
-   .inventions__one_invention.element-item( id='#{link}', class='#{type}__type', data-trigger="#{link}-tooltip" )
-      .invention__image
+mixin invention( type, link, img, name, century, use, alphabet, mainAbout, moreAmount, moreAmount, side )
+   .element-item( id='#{link}', class='#{type}__sphere #{century}__century #{alphabet}__alphabet #{side}__side #{use}__use' data-trigger="#{link}-tooltip" )
+      .element-column-image
          img( src='../assets/img/inventions/#{img}' )
-      .invention__meta
-         .invention__name #{name}
+      .base_main_info.flex
+         .h3.mb-02 !{name}
          .invention__icon( class='icon-#{type}' )
-      .invention__about
-         p.invention__about-main #{mainAbout}
-         .invention__more
-            .icon-more
-            .icon-cross.base_icon( style='display: none' )
-      include __place-invention
-      +place( place, placeENG )
-   include __text-invention
-   +text( moreAmount, text, text2, text3, text4, text5 )
+      .base_about
+         p.elemnt-about-main !{mainAbout}
+
+      .element-about-iconss.mt-auto
+         .base_icons_holder
+            .base_icon.icon-light( class='icon-#{century}')
+            .base_icon.icon-light( class='icon-#{use}')
+            case (side)
+               when '0'
+               default
+                  .icon-light( data-info='side' class='icon-#{side}' )
+            case (moreAmount)
+               when '0'
+               default
+                  .icon-trigger-more
+                     .icon-more.base_icon( data-info='more' )
+                     .icon-cross.base_icon( style='display: none' )

@@ -1,24 +1,163 @@
 .filters__holder
-   #removeFilters.filters.filter__remove( style='display: none' )
-      .filter__chosen
+   #filters_slider_icon.icon-sliders.base_icon-big
+   #filters_close_icon.icon-cross.base_icon-big( style='display: none' )
+   #filter_chosen_panel.filters( style='display: none' )
+      .filter__chosen_text
       .filter__icon.icon-cross.base_icon
-   #filter__trigger.icon-sliders.base_icon-big
-   #filter__close.icon-cross.base_icon-big( style='display: none' )
-   #triggerFilters.filters
-      span Фильтры
-   #filters.filters__list( style='display: none' )
-      .filter__title Названия
-      include __filter-item
-      +filter( 'Знаки отличия', 'crown' )
-      +filter( 'Оружие', 'battle' )
-      +filter( 'Строение', 'architect' )
-      +filter( 'Орудия', 'tool' )
-      .filter__title Изобретения
-      include __filter-item
-      +filter( 'Военные машины', 'war' )
-      +filter( 'Научные', 'drafting_compass' )
-      +filter( 'Гражданские', 'peace' )
-      //+filter( 'Течение философии', 'thinker' )
+   .filters__trigger_holder
+      .filters__list_trigger.filters( data-filter-type='sphere' )
+         span Фильтр&nbsp;
+         span по сфере применения
+      .filters__list_trigger.filters( data-filter-type='side' )
+         span Фильтр&nbsp;
+         span по частям света
+      .filters__list_trigger.filters( data-filter-type='century' )
+         span Фильтр&nbsp;
+         span по годам изобретения
+      .filters__list_trigger.filters( data-filter-type='use' )
+         span Используется ли&nbsp;
+         span сейчас
+      .filters__list_trigger.filters( data-filter-type='alphabet' )
+         span Фильтр&nbsp;
+         span по алфавиту
+      include ../../mixins/__filter-item
+      include ../../mixins/__filter-item-letter
+   #filter_type-sphere.filters__list( style='display: none' )
+      +filter( 'Политика', 'politic' )
+      +filter( 'Правительство', 'crown' )
+      +filter( 'Война', 'war' )
+      +filter( 'Ручное оружие', 'battle' )
+      +filter( 'Метательное оружие', 'bomb' )
+      +filter( 'Инженерия', 'drafting_compass' )
+      +filter( 'Средство вещания', 'propagandist' )
+      +filter( 'Средство связи', 'connect' )
+      +filter( 'Исследование', 'scientist' )
+      +filter( 'Письмо', 'writer' )
+      +filter( 'Физика', 'atom' )
+      +filter( 'Картография', 'map' )
+      +filter( 'Филосовствование', 'thinker' )
+      +filter( 'Религиозные обряды', 'religion' )
+      +filter( 'Архитектура', 'architect' )
+      +filter( 'Писательство', 'writer' )
+      +filter( 'Музыка', 'musician' )
+      +filter( 'Изобразительное искусство', 'painter' )
+      +filter( 'Спорт', 'sportsmen' )
+   #filter_type-side.filters__list( style='display: none' )
+      +filter( 'Европа', 'europe' )
+      +filter( 'Евразия', 'eurasia' )
+      +filter( 'Азия', 'asia' )
+      +filter( 'Африка', 'africa' )
+      +filter( 'Северная Америка', 'north_america' )
+      +filter( 'Южная Америка', 'south_america' )
+      +filter( 'Австралия', 'australia' )
+      +filter( 'Антарктида', 'antarctica' )
+   #filter_type-century.filters__list( style='display: none' )
+      +filter( 'До нашей эры', 'dice' )
+      +filter( '0 - 1000', 'dice-one' )
+      +filter( '1000 - 1400', 'dice-two' )
+      +filter( '1400 - 1700', 'dice-three' )
+      +filter( '1700 - 1850', 'dice-four' )
+      +filter( '1850 - 1950', 'dice-five' )
+      +filter( '1950 - 2000', 'dice-six' )
+   #filter_type-use.filters__list( style='display: none' )
+      +filter( 'Нет, не используется', 'use-no')
+      +filter( 'Да, используется', 'use-yes')
+      +filter( 'Это база!', 'infinity')
+   #filter_type-alphabet.filters__list( style='display: none' )
+      +filter-letter( 'А' )
+      +filter-letter( 'Б' )
+      +filter-letter( 'В' )
+      +filter-letter( 'Г' )
+      +filter-letter( 'Д' )
+      +filter-letter( 'Е' )
+      +filter-letter( 'Ё' )
+      +filter-letter( 'Ж' )
+      +filter-letter( 'З' )
+      +filter-letter( 'И' )
+      +filter-letter( 'К' )
+      +filter-letter( 'Л' )
+      +filter-letter( 'М' )
+      +filter-letter( 'Н' )
+      +filter-letter( 'О' )
+      +filter-letter( 'П' )
+      +filter-letter( 'Р' )
+      +filter-letter( 'С' )
+      +filter-letter( 'Т' )
+      +filter-letter( 'У' )
+      +filter-letter( 'Ф' )
+      +filter-letter( 'Х' )
+      +filter-letter( 'Ц' )
+      +filter-letter( 'Ч' )
+      +filter-letter( 'Э' )
+      +filter-letter( 'Ю' )
+      +filter-letter( 'Я' )
 
-
+   #filters_decoding
+      sup ?
+      .icon-cross
+   #filter_help( style='display: none' )
+      .filters__index
+         .h3.mb-05 Сфера применения
+         +filter( 'Политика', 'politic' )
+         +filter( 'Правительство', 'crown' )
+         +filter( 'Война', 'war' )
+         +filter( 'Ручное оружие', 'battle' )
+         +filter( 'Метательное оружие', 'bomb' )
+         +filter( 'Инженерия', 'drafting_compass' )
+         +filter( 'Средство вещания', 'propagandist' )
+         +filter( 'Средство связи', 'connect' )
+         +filter( 'Исследование', 'scientist' )
+         +filter( 'Письмо', 'writer' )
+         +filter( 'Физика', 'atom' )
+         +filter( 'Картография', 'map' )
+         +filter( 'Филосовствование', 'thinker' )
+         +filter( 'Религиозные обряды', 'religion' )
+         +filter( 'Архитектура', 'architect' )
+         +filter( 'Писательство', 'writer' )
+         +filter( 'Музыка', 'musician' )
+         +filter( 'Изобразительное искусство', 'painter' )
+         +filter( 'Спорт', 'sportsmen' )
+      .filters__index
+         .h3.mb-05 Части света
+         +filter( 'Европа', 'europe' )
+         +filter( 'Евразия', 'eurasia' )
+         +filter( 'Азия', 'asia' )
+         +filter( 'Африка', 'africa' )
+         +filter( 'Северная Америка', 'north_america' )
+         +filter( 'Южная Америка', 'south_america' )
+         +filter( 'Австралия', 'australia' )
+         +filter( 'Антарктида', 'antarctica' )
+      .filters__index
+         .h3.mb-05 Года изобретения
+         +filter( 'До нашей эры', 'dice' )
+         +filter( '0 - 1000', 'dice-one' )
+         +filter( '1000 - 1400', 'dice-two' )
+         +filter( '1400 - 1700', 'dice-three' )
+         +filter( '1700 - 1850', 'dice-four' )
+         +filter( '1850 - 1950', 'dice-five' )
+         +filter( '1950 - 2000', 'dice-six' )
+      .filters__index
+         .h3.mb-05 Используется
+            br
+            | в&nbsp;наше время
+         +filter( 'Нет, не используется', 'use-no')
+         +filter( 'Да, используется', 'use-yes')
+         +filter( 'Это база!', 'infinity')
+      .filters__index
+         .h3 По алфавиту
+         .h5.mb-05 Берётся первая буква
+            br
+            | названия
+         .filters__item
+            .filter__text
+               span А
+               | стролябия
+         .filters__item
+            .filter__text Персональный
+               span к
+               | омпьютер
+         .filters__item
+            .filter__text
+               span.ml-0 П
+               | орох
 

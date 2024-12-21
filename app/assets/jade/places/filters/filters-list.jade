@@ -5,7 +5,7 @@
       .filter__chosen_text
       .filter__icon.icon-cross.base_icon
    .filters__trigger_holder
-      .filters__list_trigger.filters( data-filter-type='continent' )
+      .filters__list_trigger.filters( data-filter-type='side' )
          span Фильтр&nbsp;
          span по частям света
       .filters__list_trigger.filters( data-filter-type='placetype' )
@@ -19,10 +19,11 @@
          span по алфавиту
       include ../../mixins/__filter-item
       include ../../mixins/__filter-item-letter
-   #filter_type-continent.filters__list( style='display: none' )
-      +filter( 'Африка', 'africa' )
+   #filter_type-side.filters__list( style='display: none' )
       +filter( 'Европа', 'europe' )
+      +filter( 'Евразия', 'eurasia' )
       +filter( 'Азия', 'asia' )
+      +filter( 'Африка', 'africa' )
       +filter( 'Северная Америка', 'north_america' )
       +filter( 'Южная Америка', 'south_america' )
       +filter( 'Австралия', 'australia' )
@@ -94,9 +95,10 @@
    #filter_help( style='display: none' )
       .filters__index
          .h3.mb-05 Части света
-         +filter( 'Африка', 'africa' )
          +filter( 'Европа', 'europe' )
+         +filter( 'Евразия', 'eurasia' )
          +filter( 'Азия', 'asia' )
+         +filter( 'Африка', 'africa' )
          +filter( 'Северная Америка', 'north_america' )
          +filter( 'Южная Америка', 'south_america' )
          +filter( 'Австралия', 'australia' )

@@ -1,11 +1,11 @@
-mixin item( type, century, bc, date, name, alphabet, link, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount )
-   .events__item.element-item( id='#{link}', class='#{type}__type #{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
+mixin item( type, century, bc, date, name, alphabet, link, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount, side )
+   .events__item.element-item( id='#{link}', class='#{type}__type #{century}__century #{alphabet}__alphabet #{side}__side', data-sort='#{bc}#{date}' )
       .element-about-icons.base_icon-big( class='icon-#{type}' )
       .events__dates.base_main_info
-         .event__date.h3.mb-02 #{date}
-         .event__name.h4.mb-05.text-black #{name}
+         .event__date.h3.mb-02 !{date}
+         .event__name.h4.mb-05.text-black !{name}
       .base_about
-         p.elemnt-about-main #{mainAbout}
+         p.elemnt-about-main !{mainAbout}
 
       .element-about-iconss
          .base_icons_holder
@@ -30,6 +30,10 @@ mixin item( type, century, bc, date, name, alphabet, link, mainAbout, whereAmoun
                default
                   .icon-trigger-image
                      .icon-image.base_icon( data-info='image' )
+            case (side)
+               when '0'
+               default
+                  .icon-light( data-info='side' class='icon-#{side}' )
             case (moreAmount)
                when '0'
                   .icon-trigger-more

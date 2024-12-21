@@ -4,38 +4,38 @@ mixin where( whereAmount, where, whereENG, where2, whereENG2, where3, whereENG3 
          .info_place.base_panel_info( style='display: none' )
             case (whereENG)
                when ''
-                  span #{where}
+                  span !{where}
                default
-                  a( href='./places.html##{whereENG}' ) #{where}
+                  a( href='./places.html##{whereENG}' ) !{where}
       when '2'
          .info_place.base_panel_info( style='display: none' )
             case (whereENG)
                when ''
-                  span #{where}
+                  span !{where}
                default
-                  a( href='./places.html##{whereENG}' ) #{where}
+                  a( href='./places.html##{whereENG}' ) !{where}
             | ,&nbsp;
             case (whereENG2)
                when ''
-                  span #{where2}
+                  span !{where2}
                default
-                  a( href='./places.html##{whereENG2}' ) #{where2}
+                  a( href='./places.html##{whereENG2}' ) !{where2}
       when '3'
          .info_place.base_panel_info( style='display: none' )
             case (whereENG)
                when ''
-                  span #{where}
+                  span !{where}
                default
-                  a( href='./places.html##{whereENG}' ) #{where}
+                  a( href='./places.html##{whereENG}' ) !{where}
             | ,&nbsp;
             case (whereENG2)
                when ''
-                  span #{where2}
+                  span !{where2}
                default
-                  a( href='./places.html##{whereENG2}' ) #{where2}
+                  a( href='./places.html##{whereENG2}' ) !{where2}
             | ,&nbsp;
             case (whereENG3)
                when ''
-                  span #{where3}
+                  span !{where3}
                default
-                  a( href='./places.html##{whereENG3}' ) #{where3}
+                  a( href='./places.html##{whereENG3}' ) !{where3}

@@ -2,6 +2,6 @@ mixin person( type, id, name, data )
    .persons__one_person.element-item( id='#{id}', class='#{type}__type' )
       .person__icon( class='icon-#{type}' )
       .person__meta
-         .person__name #{name}
+         .person__name !{name}
          .person__years #{data}
 

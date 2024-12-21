@@ -4,38 +4,38 @@ mixin theory( theoryAmount, theory, theoryENG, theory2, theoryENG2, theory3, the
          .info_theory.base_panel_info( style='display: none' )
             case (theoryENG)
                when ''
-                  span #{theory}
+                  span !{theory}
                default
-                  a( href='./concepts.html##{theoryENG}' ) #{theory}
+                  a( href='./concepts.html##{theoryENG}' ) !{theory}
       when '2'
          .info_theory.base_panel_info( style='display: none' )
             case (theoryENG)
                when ''
-                  span #{theory}
+                  span !{theory}
                default
-                  a( href='./concepts.html##{theoryENG}' ) #{theory}
+                  a( href='./concepts.html##{theoryENG}' ) !{theory}
             | ,&nbsp;
             case (theoryENG2)
                when ''
-                  span #{theory2}
+                  span !{theory2}
                default
-                  a( href='./concepts.html##{theoryENG2}' ) #{theory2}
+                  a( href='./concepts.html##{theoryENG2}' ) !{theory2}
       when '3'
          .info_theory.base_panel_info( style='display: none' )
             case (theoryENG)
                when ''
-                  span #{theory}
+                  span !{theory}
                default
-                  a( href='./concepts.html##{theoryENG}' ) #{theory}
+                  a( href='./concepts.html##{theoryENG}' ) !{theory}
             | ,&nbsp;
             case (theoryENG2)
                when ''
-                  span #{theory2}
+                  span !{theory2}
                default
-                  a( href='./concepts.html##{theoryENG2}' ) #{theory2}
+                  a( href='./concepts.html##{theoryENG2}' ) !{theory2}
             | ,&nbsp;
             case (theoryENG3)
                when ''
-                  span #{theory3}
+                  span !{theory3}
                default
-                  a( href='./concepts.html##{theoryENG3}' ) #{theory3}
+                  a( href='./concepts.html##{theoryENG3}' ) !{theory3}

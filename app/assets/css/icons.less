@@ -107,6 +107,12 @@
    &:before {
       content: "\f16d"; }
 }
+.icon-git {
+   .lab();
+   &:before {
+      content: "\f09b"; }
+}
+
 .icon-sponsr {
    position: relative;
    width: 1.3rem;
@@ -434,7 +440,26 @@
       content: "\f526"; }
 }
 
-
+.icon-use-yes {
+   .la();
+   &:before {
+      content: "\f055"; }
+}
+.icon-use-no {
+   .la();
+   &:before {
+      content: "\f056"; }
+}
+.icon-connect {
+   .la();
+   &:before {
+      content: "\f0c1"; }
+}
+.icon-infinity {
+   .la();
+   &:before {
+      content: "\f534"; }
+}
 
 
 /* common */
@@ -468,37 +493,71 @@
 
 /*  */
 .icon-countries() {
+   .flex-center();
    width: 18px !important;
    height: 18px !important;
-   border-radius: 50px;
+   
+   opacity: .4;
+   
+   position: relative;
+   
+   &:before {
+      .pseudo();
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+   }
 }
 .icon-africa {
    .icon-countries();
-   background-color: yellow;
+
+   &:before {
+      background-color: #f1f100;
+   }
 }
 .icon-europe {
    .icon-countries();
-   background-color: red;
+   
+   &:before {
+      background-color: #2d7fd6;
+   }
 }
 .icon-asia {
    .icon-countries();
-   background-color: coral;
+   
+   &:before {
+      background-color: coral;
+   }
+}
+.icon-eurasia {
+   .icon-countries();
+   &:before {
+      background-color: red;
+   }
 }
 .icon-north_america {
    .icon-countries();
-   background-color: cornflowerblue;
+   &:before {
+      background-color: #a0edea;
+   }
 }
 .icon-south_america {
    .icon-countries();
-   background-color: lightgreen;
+   &:before {
+      background-color: lightgreen;
+   }
 }
 .icon-australia {
    .icon-countries();
-   background-color: purple;
+   &:before {
+      background-color: purple;
+   }
 }
 .icon-antarctica {
    .icon-countries();
-   background-color: slategray;
+   &:before {
+      background-color: slategray;
+   }
 }
 
 /* img icons */
@@ -549,7 +608,6 @@
 .icon-city {
    .icon-img('city')
 }
-
 
 
 /* common */

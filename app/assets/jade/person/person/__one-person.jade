@@ -1,15 +1,15 @@
-mixin person( name, typeAmount, type1, type2, type3, type4, type5, id, century, bc, date, alphabet, img, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount, war, theory )
-   .element-item( id='#{id}', class='#{century}__century #{alphabet}__alphabet', data-sort='#{bc}#{date}' )
+mixin person( name, typeAmount, type1, type2, type3, type4, type5, id, century, bc, date, alphabet, img, mainAbout, whereAmount, whoAmount, imageAmount, moreAmount, war, theory, side )
+   .element-item( id='#{id}', class='#{century}__century #{alphabet}__alphabet #{side}__side', data-sort='#{bc}#{date}' )
       .element-column-image
          img( src='../assets/img/person/#{name}/#{img}' )
       .element-about-icons
-         include ___type-person
+         include ../../mixins/___type-person
          +type( typeAmount, type1, type2, type3, type4, type5 )
       .base_main_info
-         .h3.mb-02 #{name}
-         .h4 #{date}
+         .h3.mb-02 !{name}
+         .h4 !{date}
       .base_about
-         p.elemnt-about-main #{mainAbout}
+         p.elemnt-about-main !{mainAbout}
 
       .icons-panel-triggers
          .base_icons_holder
@@ -33,6 +33,10 @@ mixin person( name, typeAmount, type1, type2, type3, type4, type5, id, century, 
                when '1'
                   .icon-trigger-image
                      .icon-image.base_icon( data-info='image' )
+            case (side)
+               when '0'
+               default
+                  .icon-light( data-info='side' class='icon-#{side}' )
             case (moreAmount)
                when '0'
                   .icon-trigger-more

@@ -1,6 +1,6 @@
-mixin item( type, century, date, name, link, bc )
-   a( href='./events.html##{link}', class='#{type}__type #{century}__century', data-sort='#{bc}#{date}' ).timeline__item.element-item.element-item-holder
+mixin item( type, century, date, name, link, bc, side )
+   a( href='./events.html##{link}' class='#{type}__type #{century}__century #{side}__side' data-sort='#{bc}#{date}' ).timeline__item.element-item.element-item-holder
       .timeline__icon.base_icon( class='icon-#{type}' )
       .timeline__dates
-         .timeline__date.h3.mb-02 #{date}
-         .timeline__name.mb-05.text-black #{name}
+         .timeline__date.h3.mb-02 !{date}
+         .timeline__name.mb-05.text-black !{name}

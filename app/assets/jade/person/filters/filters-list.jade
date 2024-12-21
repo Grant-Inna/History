@@ -8,6 +8,9 @@
       .filters__list_trigger.filters( data-filter-type='sphere' )
          span Фильтр&nbsp;
          span по сфере
+      .filters__list_trigger.filters( data-filter-type='side' )
+         span Фильтр&nbsp;
+         span по частям света
       .filters__list_trigger.filters( data-filter-type='century' )
          span Фильтр&nbsp;
          span по годам жизни
@@ -36,6 +39,15 @@
       +filter( 'Музыкант', 'musician' )
       +filter( 'Художник', 'painter' )
       +filter( 'Спортсмен', 'sportsmen' )
+   #filter_type-side.filters__list( style='display: none' )
+      +filter( 'Европа', 'europe' )
+      +filter( 'Евразия', 'eurasia' )
+      +filter( 'Азия', 'asia' )
+      +filter( 'Африка', 'africa' )
+      +filter( 'Северная Америка', 'north_america' )
+      +filter( 'Южная Америка', 'south_america' )
+      +filter( 'Австралия', 'australia' )
+      +filter( 'Антарктида', 'antarctica' )
    #filter_type-century.filters__list( style='display: none' )
       +filter( 'До нашей эры', 'dice' )
       +filter( '0 - 1000', 'dice-one' )
@@ -98,6 +110,16 @@
          +filter( 'Музыкант', 'musician' )
          +filter( 'Художник', 'painter' )
          +filter( 'Спортсмен', 'sportsmen' )
+      .filters__index
+         .h3.mb-05 Части света
+         +filter( 'Европа', 'europe' )
+         +filter( 'Евразия', 'eurasia' )
+         +filter( 'Азия', 'asia' )
+         +filter( 'Африка', 'africa' )
+         +filter( 'Северная Америка', 'north_america' )
+         +filter( 'Южная Америка', 'south_america' )
+         +filter( 'Австралия', 'australia' )
+         +filter( 'Антарктида', 'antarctica' )
       #filter_help_century.filters__index
          .h3.mb-05 Года жизни
          +filter( 'До нашей эры', 'dice' )

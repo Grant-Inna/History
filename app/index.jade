@@ -6,7 +6,7 @@ html
       meta( name="MobileOptimized" content="width" )
       meta( name="HandheldFriendly", content="True" )
       meta( charset = "UTF-8")
-      title Уроки итории от Клима Жукова
+      title Песочница и Немного истории
       link( rel="shortcut icon" href="./assets/data/favicon/favicon.svg" type="image/x-icon" )
       link( type="text/css" rel="stylesheet" href="assets/css/style.css" )
 
@@ -21,8 +21,8 @@ html
 
          header.header__holder.wrapper
             .header__title.h1.bedas.text-white( data-trigger="index-tooltip" )
-               h2 Уроки&nbsp;истории
-                  span от Клима&nbsp;Жукова
+               h2 Играемся с&nbsp;js-кой
+                  span Купаемся в&nbsp;иконках
                      sup ?
             include assets/jade/static/socials
          include assets/jade/menu/menu
@@ -30,16 +30,16 @@ html
 
 
 
-   footer.footer__holder
-      .wrapper.footer__content
-         .footer__author  &copy;&nbsp;2021–
-            span.footer__year
-            | &nbsp;&nbsp;Инна Грант • elGranto
+      footer.footer__holder
+         .wrapper.footer__content
+            .footer__author  &copy;&nbsp;2021–
+               span.footer__year
+               | &nbsp;&nbsp;Инна Грант • elGarro
 
-   script( src='./assets/js/jquery.js' )
-   script( src='./assets/js/build.js' )
-   script.
-      $('span.footer__year').text(new Date().getFullYear())
+      script( src='./assets/js/jquery.js' )
+      script( src='./assets/js/build.js' )
+      script.
+         $('span.footer__year').text(new Date().getFullYear())
 
 
 

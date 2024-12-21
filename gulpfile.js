@@ -24,7 +24,7 @@ const base = './app/',
 
 let gridOptions = {
    columns: 24,
-   offset: "40px", // fields не меньше offset делённого на 2
+   offset: "50px", // fields не меньше offset делённого на 2
    // mobileFirst: true,
    container: {
       maxWidth: "1200px",
@@ -36,20 +36,20 @@ let gridOptions = {
       },
       lg: {
          width: "995px",
-         fields: "30px"
       },
       md: {
          width: "770px",
-         offset: "30px"
+         fields: "30px",
+         offset: "46px"
       },
       sm: {
          width: "580px",
          fields: "20px",
-         offset: "15px"
+         offset: "36px"
       },
       xs: {
          width: "415px",
-         offset: "10px"
+         offset: "20px"
       }
    }
 };

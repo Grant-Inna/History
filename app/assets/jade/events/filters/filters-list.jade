@@ -9,6 +9,9 @@ mixin filter( mt )
          .filters__list_trigger.filters( data-filter-type='type' )
             span Фильтр&nbsp;
             span по типу
+         .filters__list_trigger.filters( data-filter-type='side' )
+            span Фильтр&nbsp;
+            span по частям света
          .filters__list_trigger.filters( data-filter-type='century' )
             span Фильтр&nbsp;
             span по векам
@@ -33,6 +36,15 @@ mixin filter( mt )
          +filter( 'Битва', 'battle' )
          +filter( 'Катастрофа', 'meteor' )
          +filter( 'Строительство', 'construction' )
+      #filter_type-side.filters__list( style='display: none' )
+         +filter( 'Европа', 'europe' )
+         +filter( 'Евразия', 'eurasia' )
+         +filter( 'Азия', 'asia' )
+         +filter( 'Африка', 'africa' )
+         +filter( 'Северная Америка', 'north_america' )
+         +filter( 'Южная Америка', 'south_america' )
+         +filter( 'Австралия', 'australia' )
+         +filter( 'Антарктида', 'antarctica' )
       #filter_type-century.filters__list( style='display: none' )
          include ../../mixins/__filter-item
          +filter( 'До нашей эры', 'dice' )
@@ -93,6 +105,16 @@ mixin filter( mt )
             +filter( 'Битва', 'battle' )
             +filter( 'Катастрофа', 'meteor' )
             +filter( 'Строительство', 'construction' )
+         .filters__index
+            .h3.mb-05 Части света
+            +filter( 'Европа', 'europe' )
+            +filter( 'Евразия', 'eurasia' )
+            +filter( 'Азия', 'asia' )
+            +filter( 'Африка', 'africa' )
+            +filter( 'Северная Америка', 'north_america' )
+            +filter( 'Южная Америка', 'south_america' )
+            +filter( 'Австралия', 'australia' )
+            +filter( 'Антарктида', 'antarctica' )
          #filter_help_century.filters__index
             .h3.mb-05 По векам
             +filter( 'До нашей эры', 'dice' )

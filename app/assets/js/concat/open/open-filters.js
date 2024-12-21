@@ -7,6 +7,7 @@ $(function () {
       
       $('#filters_slider_icon').on('click', function (event) { // при нажтии на иконку слайдера всё начинается
          event.stopPropagation();
+         // alert();
          $( '#filter_help' ).fadeOut(100);
          // скрытие #filters_slider_icon, #filters_close_icon и .filters__list_trigger
          hideFilters_slider_icon__showSome();
@@ -50,7 +51,9 @@ $(function () {
             $list_trigger = $('.filters__list_trigger'),
             $close_icon = $('#filters_close_icon');
          
-         $slider_icon.hide();
+         $slider_icon.hide(); // добавить тут закрытие подсказки!
+         $('#filter_help').fadeOut(100);
+         $('#filters_decoding').removeClass('active');
          $list_trigger.slideDown();
          $close_icon.fadeIn(300);
       }
@@ -100,14 +103,19 @@ $(function () {
             event.stopPropagation();
             let text = $(this).find('.filter__text').html();
             $chosen_panel_text.html(text);
-            
             let type = $(this).find('.filter__data').data('filter'),
-               current = $(this).closest('.filters__list').attr('id'),
-               current_type = current.split('-')[1],
-               needed = $holder.find('.' + type + '__' + current_type),
+                current = $(this).closest('.filters__list').attr('id'),
+                current_type = current.split('-')[1],
+                concat = '.' + type + '__' + current_type,
+                needed = $holder.find(concat),
             
             target = needed.closest('.element-item-holder');
-            console.log($item);
+            // console.log('type: ' + type);
+            // console.log('current: ' + current);
+            // console.log('current_type: ' + current_type);
+            // console.log('concat: ' + $(concat));
+            // console.log('needed: ' + needed);
+            // console.log('target: ' + target);
             
             $item.hide();
             target.show();
